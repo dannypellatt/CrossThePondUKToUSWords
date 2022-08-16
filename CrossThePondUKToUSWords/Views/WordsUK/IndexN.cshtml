@@ -1,0 +1,29 @@
+﻿model List<wordsUK>
+
+    <h2>UK Words - N</h2>
+    <table class="table">
+        <tr>
+            <th>British word</th>
+            <th>UK emphasis</th>
+            <th>UK pronunciation</th>
+            <th>American word</th>
+            <th>US emphasis</th>
+            <th>US pronunciation</th>
+            <th>Meaning</th>
+
+        </tr>
+
+        @foreach (var word in Model)
+        {
+            <tr>
+                <td>@word.wordUK</td>
+                <td>@word.emphasisUK</td>
+                <td>@word.pronunciationUK</td>
+                <td>@word.wordUSA</td>
+                <td>@word.emphasisUSA</td>
+                <td>@word.pronunciationUSA</td>
+                <td>@word.definition</td>
+            </tr>
+        }
+
+    </table>

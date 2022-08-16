@@ -1,7 +1,20 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using System.Data;
+using CrossThePondUKToUSWords;
+using MySql.Data.MySqlClient;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("CrossThePond"));
+    conn.Open();
+    return conn;
+});
+
+builder.Services.AddTransient<IwordsUKRepository, wordsUKRepository>();
 
 var app = builder.Build();
 
