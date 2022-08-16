@@ -2,7 +2,7 @@
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   html {
     font-size: 16px;
   }
@@ -15,4 +15,52 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: rgb(249,259,249);
 }
+
+
+
+.wrd {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.emph {
+    font-style: oblique;
+    font-size: 14px;
+}
+
+.pro {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.nav-title {
+    font-weight: bold;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+.nav-item {
+    margin-left: 5px;
+}
+
+.table {
+
+}
+
+th {
+    background-color: #DFEEED;
+}
+
+
+/*This doesn't work - figure out why*/
+
+/*.nav-link:active:after {
+    text-decoration: underline;
+}*/
+
+/*Looks like I can't do this with just CSS, must use javascript)*/
+
