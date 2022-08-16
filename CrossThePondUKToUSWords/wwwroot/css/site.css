@@ -13,18 +13,28 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-  background-color: rgb(249,259,249);
+.container-fluid {
+    border-bottom: solid, 2px, black;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
+body {
+  margin-bottom: 60px;
+  background-color: white;
+}
 
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .wrd {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    margin-left: 10px;
-    margin-right: 30px;
+    margin-left: 15px;
+    margin-right: 0px;
+    border-left: solid 1px black;
 }
 
 .emph {
@@ -37,23 +47,52 @@ body {
     font-size: 14px;
 }
 
+.def {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
 .nav-title {
     font-weight: bold;
     margin-left: 30px;
     margin-right: 5px;
 }
 
-.nav-item {
+.allButton {
     margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav-item {
+    margin-left: 2px;
 }
 
 .table {
-
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: rgb(249,259,249);
 }
 
-th {
+.thead {
     background-color: #DFEEED;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: solid 2px black;
 }
+
+.thead .def {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+.thead .wrd {
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+
 
 
 /*This doesn't work - figure out why*/

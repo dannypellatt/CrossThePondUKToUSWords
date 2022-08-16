@@ -10,17 +10,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrossThePondUKToUSWords.Controllers
 {
-    public class WordsUKController : Controller
+    public class WordsUSAController : Controller
     {
 
         private readonly IwordsUKRepository repo;
 
-        public WordsUKController(IwordsUKRepository repo)
+        public WordsUSAController(IwordsUKRepository repo)
         {
             this.repo = repo;
         }
 
-        #region UK to USA words
+        #region USA to UK words
 
         public IActionResult Index()
         {
@@ -35,12 +35,13 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsA = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'a' || word.wordUK.First() == 'A')
+                if (word.wordUSA.First() == 'a' || word.wordUSA.First() == 'A')
                 {
                     wordsA.Add(word);
                 }
 
             }
+
             return View(wordsA);
         }
 
@@ -50,7 +51,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsB = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'b' || word.wordUK.First() == 'B')
+                if (word.wordUSA.First() == 'b' || word.wordUSA.First() == 'B')
                 {
                     wordsB.Add(word);
                 }
@@ -66,7 +67,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsC = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'c' || word.wordUK.First() == 'C')
+                if (word.wordUSA.First() == 'c' || word.wordUSA.First() == 'C')
                 {
                     wordsC.Add(word);
                 }
@@ -82,7 +83,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsD = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'd' || word.wordUK.First() == 'D')
+                if (word.wordUSA.First() == 'd' || word.wordUSA.First() == 'D')
                 {
                     wordsD.Add(word);
                 }
@@ -98,7 +99,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsE = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'E' || word.wordUK.First() == 'E')
+                if (word.wordUSA.First() == 'E' || word.wordUSA.First() == 'E')
                 {
                     wordsE.Add(word);
                 }
@@ -114,7 +115,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsF = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'f' || word.wordUK.First() == 'F')
+                if (word.wordUSA.First() == 'f' || word.wordUSA.First() == 'F')
                 {
                     wordsF.Add(word);
                 }
@@ -130,7 +131,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsG = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'G' || word.wordUK.First() == 'G')
+                if (word.wordUSA.First() == 'G' || word.wordUSA.First() == 'G')
                 {
                     wordsG.Add(word);
                 }
@@ -146,7 +147,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsH = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'h' || word.wordUK.First() == 'H')
+                if (word.wordUSA.First() == 'h' || word.wordUSA.First() == 'H')
                 {
                     wordsH.Add(word);
                 }
@@ -162,7 +163,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsI = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'i' || word.wordUK.First() == 'I')
+                if (word.wordUSA.First() == 'i' || word.wordUSA.First() == 'I')
                 {
                     wordsI.Add(word);
                 }
@@ -178,7 +179,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsJ = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'j' || word.wordUK.First() == 'J')
+                if (word.wordUSA.First() == 'j' || word.wordUSA.First() == 'J')
                 {
                     wordsJ.Add(word);
                 }
@@ -194,7 +195,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsK = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'k' || word.wordUK.First() == 'K')
+                if (word.wordUSA.First() == 'k' || word.wordUSA.First() == 'K')
                 {
                     wordsK.Add(word);
                 }
@@ -210,7 +211,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsL = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'l' || word.wordUK.First() == 'L')
+                if (word.wordUSA.First() == 'l' || word.wordUSA.First() == 'L')
                 {
                     wordsL.Add(word);
                 }
@@ -226,7 +227,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsM = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'm' || word.wordUK.First() == 'M')
+                if (word.wordUSA.First() == 'm' || word.wordUSA.First() == 'M')
                 {
                     wordsM.Add(word);
                 }
@@ -242,7 +243,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsN = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'n' || word.wordUK.First() == 'N')
+                if (word.wordUSA.First() == 'n' || word.wordUSA.First() == 'N')
                 {
                     wordsN.Add(word);
                 }
@@ -258,7 +259,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsO = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'o' || word.wordUK.First() == 'O')
+                if (word.wordUSA.First() == 'o' || word.wordUSA.First() == 'O')
                 {
                     wordsO.Add(word);
                 }
@@ -274,7 +275,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsP = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'p' || word.wordUK.First() == 'P')
+                if (word.wordUSA.First() == 'p' || word.wordUSA.First() == 'P')
                 {
                     wordsP.Add(word);
                 }
@@ -290,7 +291,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsQ = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'q' || word.wordUK.First() == 'Q')
+                if (word.wordUSA.First() == 'q' || word.wordUSA.First() == 'Q')
                 {
                     wordsQ.Add(word);
                 }
@@ -306,7 +307,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsR = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'r' || word.wordUK.First() == 'R')
+                if (word.wordUSA.First() == 'r' || word.wordUSA.First() == 'R')
                 {
                     wordsR.Add(word);
                 }
@@ -322,7 +323,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsS = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 's' || word.wordUK.First() == 'S')
+                if (word.wordUSA.First() == 's' || word.wordUSA.First() == 'S')
                 {
                     wordsS.Add(word);
                 }
@@ -338,7 +339,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsT = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 't' || word.wordUK.First() == 'T')
+                if (word.wordUSA.First() == 't' || word.wordUSA.First() == 'T')
                 {
                     wordsT.Add(word);
                 }
@@ -354,7 +355,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsU = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'u' || word.wordUK.First() == 'U')
+                if (word.wordUSA.First() == 'u' || word.wordUSA.First() == 'U')
                 {
                     wordsU.Add(word);
                 }
@@ -370,7 +371,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsV = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'v' || word.wordUK.First() == 'V')
+                if (word.wordUSA.First() == 'v' || word.wordUSA.First() == 'V')
                 {
                     wordsV.Add(word);
                 }
@@ -386,7 +387,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsW = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'w' || word.wordUK.First() == 'W')
+                if (word.wordUSA.First() == 'w' || word.wordUSA.First() == 'W')
                 {
                     wordsW.Add(word);
                 }
@@ -402,7 +403,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsXYZ = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUK.First() == 'x' || word.wordUK.First() == 'X' || word.wordUK.First() == 'y' || word.wordUK.First() == 'Y' || word.wordUK.First() == 'z' || word.wordUK.First() == 'Z')
+                if (word.wordUSA.First() == 'x' || word.wordUSA.First() == 'X' || word.wordUSA.First() == 'y' || word.wordUSA.First() == 'Y' || word.wordUSA.First() == 'z' || word.wordUSA.First() == 'Z')
                 {
                     wordsXYZ.Add(word);
                 }
@@ -418,4 +419,3 @@ namespace CrossThePondUKToUSWords.Controllers
 
 
 }
-
