@@ -38,6 +38,7 @@ namespace CrossThePondUKToUSWords.Controllers
                 if (word.wordUSA.First() == 'a' || word.wordUSA.First() == 'A')
                 {
                     wordsA.Add(word);
+                    //wordsA.Sort();
                 }
 
             }

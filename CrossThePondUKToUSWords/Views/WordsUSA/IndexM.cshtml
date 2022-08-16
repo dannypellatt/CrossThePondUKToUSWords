@@ -1,14 +1,14 @@
 ﻿@model List<wordsUK>
 
-<h2>UK to USA - M</h2>
+<h2>USA to UK - <strong>A</strong></h2>
 <table class="table">
     <tr class="thead">
-        <th class="wrd">Britain</th>
-        <th class="emph">UK emphasis</th>
-        <th class="pro">UK pronunciation</th>
         <th class="wrd">America</th>
         <th class="emph">US emphasis</th>
         <th class="pro">US pronunciation</th>
+        <th class="wrd">Britain</th>
+        <th class="emph">UK emphasis</th>
+        <th class="pro">UK pronunciation</th>
         <th class="def">Meaning</th>
 
     </tr>
@@ -16,14 +16,13 @@
     @foreach (var word in Model)
     {
         <tr>
-            <td class="wrd">@word.wordUK</td>
-            <td class="emph">@word.emphasisUK</td>
-            <td class="pro">@word.pronunciationUK</td>
             <td class="wrd">@word.wordUSA</td>
             <td class="emph">@word.emphasisUSA</td>
             <td class="pro">@word.pronunciationUSA</td>
+            <td class="wrd">@word.wordUK</td>
+            <td class="emph">@word.emphasisUK</td>
+            <td class="pro">@word.pronunciationUK</td>
             <td class="def">@word.definition</td>
         </tr>
     }
-
 </table>

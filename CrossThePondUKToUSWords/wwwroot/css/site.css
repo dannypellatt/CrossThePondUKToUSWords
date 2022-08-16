@@ -24,6 +24,24 @@ body {
   background-color: white;
 }
 
+.pageTitle {
+    display: inline-flex;
+}
+
+.pageTitle li {
+    display: inline-flex;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.alphabet {
+/*    TODO text-align: right;    */
+}
+
 h2 {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -63,8 +81,8 @@ h2 {
     margin-right: 5px;
 }
 
-.nav-item {
-    margin-left: 2px;
+.title-nav-item {
+    margin-left: 0px;
 }
 
 .table {
