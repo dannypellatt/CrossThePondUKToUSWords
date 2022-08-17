@@ -11,6 +11,9 @@
     <None Remove="MySql.Data" />
     <None Remove="Views\WordsUK\" />
     <None Remove="Views\WordsUSA\" />
+    <None Remove="Views\Temp\" />
+    <None Remove="Views\Tipping\" />
+    <None Remove="Views\Weather\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -19,5 +22,7 @@
   <ItemGroup>
     <Folder Include="Views\WordsUK\" />
     <Folder Include="Views\WordsUSA\" />
+    <Folder Include="Views\Tipping\" />
+    <Folder Include="Views\Weather\" />
   </ItemGroup>
 </Project>
