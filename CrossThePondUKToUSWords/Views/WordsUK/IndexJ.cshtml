@@ -3,12 +3,16 @@
     <style>
 
         .pageTitle {
-            align-content: center;
-            text-align: center
+            margin: auto;
+            border: 3px solid green;
+            padding: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+            border: 3px solid green;
         }
 
         strong {
-            font-size: larger;
+            font-size: xx-large;
             text-decoration: underline;
         }
 
@@ -16,10 +20,6 @@
             text-align: center;
             margin-top: 30px;
             margin-bottom: 30px;
-        }
-
-        .alphabet {
-            /*    TODO text-align: right;    */
         }
 
         h2 {
@@ -101,7 +101,6 @@
 
     <h1>UK to USA</h1>
     <div class="pageTitle">
-        <h2><strong>J</strong> </h2>
         <div>
             <li class="title-nav-item allButton">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="Index">All Words</a>
@@ -134,7 +133,7 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexI">I</a>
             </li>
             <li class="title-nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexJ">J</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexJ"><strong>J</strong></a>
             </li>
             @*<li class="title-nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexK">K</a>

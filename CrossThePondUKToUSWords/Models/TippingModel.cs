@@ -7,6 +7,8 @@ namespace CrossThePondUKToUSWords.Models
 
         public double result { get; set; }
 
+        public double total { get; set; }
+
         public string calculate { get; set; }
 
     }

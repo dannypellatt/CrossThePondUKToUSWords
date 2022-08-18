@@ -26,20 +26,25 @@ namespace CrossThePondUKToUSWords.Controllers
             if (cal.calculate == "Tip: 10")
             {
                 cal.result = a * 0.10;
+                cal.total = a + (a * 0.10);
             }
             if (cal.calculate == "Tip: 15")
             {
                 cal.result = a * 0.15;
+                cal.total = a + (a * 0.15);
             }
             if (cal.calculate == "Tip: 20")
             {
                 cal.result = a * 0.2;
+                cal.total = a + (a * 0.2);
             }
             if (cal.calculate == "Tip: 25")
             {
                 cal.result = a * 0.25;
+                cal.total = a + (a * 0.25);
             }
             ViewData["result"] = cal.result;
+            ViewData["total"] = cal.total;
             return View();
         }
 

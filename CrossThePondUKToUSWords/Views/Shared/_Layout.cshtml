@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CrossThePondUKToUSWords.styles.css" asp-append-version="true" />
+    <style>
+
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            @*border: 1px solid #ccc;*@
+        }
+        .left {
+            text-align: left;
+            padding-left: 50px;
+        }
+        .center {
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .right {
+            text-align: right;
+            padding-right: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,9 +38,9 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between grid-container">
 
-                    <ul class="navbar-nav flex-grow-1 menu-left">
+                    <ul class="navbar-nav flex grid-item left">
                         <li class="nav-title">
                             <p>UK TO USA: </p>
                         </li>
@@ -38,13 +59,13 @@
                         <li class="nav-item allButton measurements">
                             <a class="nav-link text-dark" asp-area="" asp-controller="measurements" asp-action="Index">(Measurements)</a>
                         </li>
-                        <li><p>_____</p></li>
+                        
                     </ul>
 
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Cross The Pond</a>
+                    <a class="navbar-brand flex-grow-1 grid-item center" asp-area="" asp-controller="Home" asp-action="Index">Cross The Pond</a>
 
-                    <ul class="navbar-nav flex-grow-1 menu-right">
-                        <li><p>_____</p></li>
+                    <ul class="navbar-nav flex grid-item right">
+                        
                         <li class="nav-item allButton measurements">
                             <a class="nav-link text-dark" asp-area="" asp-controller="measurements" asp-action="Index">(Measurements)</a>
                         </li>
