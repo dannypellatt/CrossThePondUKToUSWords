@@ -2,19 +2,19 @@
   font-size: 14px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   html {
     font-size: 16px;
   }
 }
 
 html {
-  position: relative;
+  position: relative -1em;
   min-height: 100%;
 }
 
 .container-fluid {
-    border-bottom: solid, 2px, black;
+    border-bottom: solid 2px black;
     padding-bottom: 10px;
     padding-top: 5px;
     width: 100%;
@@ -53,7 +53,7 @@ body {
     display: inline-flex;
 }
 
-.weather, .currency, .measurements {
+.measurements {
     text-decoration: line-through;
     font-style: italic;
 }
@@ -67,28 +67,4 @@ body {
 
 /*Looks like I can't do this with just CSS, must use javascript)*/
 
-/* START Tipping Page*/
 
-#tipping {
-    display: inline-flex;
-}
-
-#tipUK {
-
-}
-
-#tipUS {
-
-}
-
-#tipForm {
-    text-align: center;
-}
-
-
-
-.notes {
-    font-style: italics;
-}
-
-/* END Tipping Page*/

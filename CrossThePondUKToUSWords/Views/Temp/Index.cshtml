@@ -1,1 +1,27 @@
-﻿<h1>Weather</h1>
+﻿@model CrossThePondUKToUSWords.Models.TempModel
+
+    <style>
+
+        h1 {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+    </style>
+
+<h1>Temperature</h1>
+
+
+<div>
+    <form class="grid-item center" asp-action="Index">
+        <label>Type in temp you want to convert</label>
+        <p><input type="number" asp-for="valueTemp" /></p>
+
+        <p><input type="submit" value="Fahrenheit to Celcius" asp-for="calculate" /></p>
+        <p><input type="submit" value="Celcius to Fahrenheit" asp-for="calculate" /></p>
+
+        <label>Result:</label>
+        <p><input type="number" asp-for="@ViewData["result"]" /></p>
+
+    </form>
+
+</div>

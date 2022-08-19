@@ -1,11 +1,14 @@
 ﻿using System.Data;
 using CrossThePondUKToUSWords;
+using CrossThePondUKToUSWords.Repositories;
 using MySql.Data.MySqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IWForecastRepository, WForecastRepository>();
 
 builder.Services.AddScoped<IDbConnection>((s) =>
 {

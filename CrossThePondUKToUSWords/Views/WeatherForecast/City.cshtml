@@ -1,0 +1,94 @@
+﻿@model CrossThePondUKToUSWords.Models.City
+
+@{
+    ViewData["Title"] = "City";
+}
+
+<style>
+
+    h1 {
+        text-align: center;
+    }
+
+    .grid-container {
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-item {
+        background-color: #ccc;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .center {
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .right {
+        text-align: right;
+    }
+</style>
+
+<h1>Weather</h1>
+
+<section>
+    <div class="grid-container">
+        <div class="grid-item left">
+            <br />
+            <h1>Forecast For UK?</h1>
+            <br />
+            <p>City Name: London</p>
+            <p>Temp C: - Temp F:</p>
+            <p>Humidity: </p>
+            <p>Weather: </p>
+        </div>
+
+
+
+        <form class="grid-item center">
+
+            <div class="container">
+                <div class="form-group">
+                    <h2>Forecast For Selected City</h2>
+                    <label asp-for="Name"></label>
+                    <span class="badge alert-primary">@Model.Name</span>
+                    <br />
+                    <label asp-for="Temperature"></label>
+                    <span class="badge alert-primary">@Model.Temperature°C</span>
+                    <br />
+                    <label asp-for="Humidity"></label>
+                    <span class="badge alert-primary">@Model.Humidity</span>
+                    <br />
+                    <label asp-for="Weather"></label>
+                    <span class="badge alert-primary">@Model.Weather</span>
+                    <br />
+
+                    <form method="get">
+                        <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-primary">Go back</button>
+                    </form>
+                </div>
+            </div>
+
+            
+        </form>
+
+        <div class="grid-item right">
+            <br />
+            <h1>Forecast For USA?</h1>
+            <br />
+            <p>City Name: Washington DC</p>
+            <p>Temp C: - Temp F:</p>
+            <p>Humidity: </p>
+            <p>Weather: </p>
+        </div>
+    </div>
+
+</section>
+
+
+

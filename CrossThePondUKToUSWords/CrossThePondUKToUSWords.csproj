@@ -13,18 +13,36 @@
     <None Remove="Views\WordsUSA\" />
     <None Remove="Views\Temp\" />
     <None Remove="Views\Tipping\" />
-    <None Remove="Views\Weather\" />
-    <None Remove="Images\" />
+    <None Remove="OpenWeatherMapModel\" />
+    <None Remove="Views\WeatherForecast\" />
+    <None Remove="Configuration\" />
+    <None Remove="Repositories\" />
+    <None Remove="RestSharp" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Views\Conversion\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\WordsUK\" />
     <Folder Include="Views\WordsUSA\" />
     <Folder Include="Views\Tipping\" />
-    <Folder Include="Views\Weather\" />
-    <Folder Include="Images\" />
+    <Folder Include="OpenWeatherMapModel\" />
+    <Folder Include="Views\WeatherForecast\" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Views\Conversion\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\CtP1.png" />
+    <Content Remove="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\CtP1.png" />
   </ItemGroup>
 </Project>

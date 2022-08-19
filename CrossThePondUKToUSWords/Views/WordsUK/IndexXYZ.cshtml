@@ -1,111 +1,106 @@
 ﻿@model List<wordsUK>
 
-    <style>
+<style>
 
-        .pageTitle {
-            align-content: center;
-            text-align: center
-        }
+    .pageTitle {
+        align-content: center;
+        text-align: center
+    }
 
-        strong {
-            font-size: larger;
+        .pageTitle strong {
+            font-size: xx-large;
             text-decoration: underline;
         }
 
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
+    .letters h1 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
-        .alphabet {
-            /*    TODO text-align: right;    */
-        }
+    .letters h2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
+    .letters .wrd {
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-right: 0px;
+        border-left: solid 1px black;
+    }
 
-        .wrd {
+    .letters .emph {
+        font-style: oblique;
+        font-size: 14px;
+    }
+
+    .letters .navitem {
+        padding-left: 10px;
+    }
+
+    .letters .pro {
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    .letters .def {
+        border-left: solid 1px black;
+        border-right: solid 1px black;
+    }
+
+    .letters .title-nav-item {
+        margin-left: 7px;
+        text-decoration: underline;
+    }
+
+    .letters .noLink {
+        padding-left: 12px;
+        padding-right: 12px;
+        text-decoration: none;
+    }
+
+    .letters .table {
+        border-top: solid 1px black;
+        border-bottom: solid 1px black;
+    }
+
+    .letters .thead {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-bottom: solid 2px black;
+    }
+
+        .letters .thead .def {
             font-size: 30px;
             font-weight: bold;
-            margin-left: 15px;
-            margin-right: 0px;
-            border-left: solid 1px black;
+            text-decoration: underline;
+            padding-left: 5px;
         }
 
-        .emph {
-            font-style: oblique;
-            font-size: 14px;
+        .letters .thead .wrd {
+            text-decoration: underline;
+            padding-left: 5px;
         }
 
-        .pro {
-            font-style: italic;
-            font-size: 14px;
-        }
+    .letters .brit {
+        max-width: 25%;
+    }
 
-        .def {
-            border-left: solid 1px black;
-            border-right: solid 1px black;
-        }
+    .letters .mrcn {
+        max-width: 25%;
+    }
+</style>
 
-        .nav-title {
-            font-weight: bold;
-            margin-left: 30px;
-            margin-right: 5px;
-        }
 
-        .allButton {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        .title-nav-item {
-            margin-left: 0px;
-        }
-
-        .table {
-            border-top: solid 1px black;
-            border-bottom: solid 1px black;
-            background-color: rgb(249,259,249);
-        }
-
-        .thead {
-            background-color: #DFEEED;
-            padding-bottom: 5px;
-            padding-top: 5px;
-            border-bottom: solid 2px black;
-        }
-
-            .thead .def {
-                font-size: 30px;
-                font-weight: bold;
-                text-decoration: underline;
-                padding-left: 5px;
-            }
-
-            .thead .wrd {
-                text-decoration: underline;
-                padding-left: 5px;
-            }
-
-        .brit {
-            max-width: 25%;
-        }
-
-        .mrcn {
-            max-width: 25%;
-        }
-    </style>
-
+<div class="Letters">
     <h1>UK to USA</h1>
     <div class="pageTitle">
-        <h2><strong>XYZ</strong> </h2>
         <div>
-            <li class="title-nav-item allButton">
-                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="Index">All Words</a>
-            </li>
+            @*<li class="title-nav-item allButton">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="Index">All Words</a>
+                </li>*@
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexA">A</a>
             </li>
@@ -121,12 +116,14 @@
             @*<li class="title-nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexE">E</a>
                 </li>*@
+            <li class="title-nav-item noLink">e</li>
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexF">F</a>
             </li>
             @*<li class="title-nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexG">G</a>
                 </li>*@
+            <li class="title-nav-item noLink">g</li>
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexH">H</a>
             </li>
@@ -139,6 +136,7 @@
             @*<li class="title-nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexK">K</a>
                 </li>*@
+            <li class="title-nav-item noLink">k</li>
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexL">L</a>
             </li>
@@ -151,6 +149,7 @@
             @*<li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexO">O</a>
                 </li>*@
+            <li class="title-nav-item noLink">o</li>
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexP">P</a>
             </li>
@@ -169,6 +168,7 @@
             @*<li class="title-nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexU">U</a>
                 </li>*@
+            <li class="title-nav-item noLink">u</li>
             <li class="title-nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexV">V</a>
             </li>
@@ -176,7 +176,7 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexW">W</a>
             </li>
             <li class="title-nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexXYZ">XYZ</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="IndexXYZ"><strong>XYZ</strong></a>
             </li>
         </div>
     </div>
@@ -206,3 +206,5 @@
         }
 
     </table>
+</div>
+    

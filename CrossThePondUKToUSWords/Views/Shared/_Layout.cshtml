@@ -27,6 +27,45 @@
             text-align: right;
             padding-right: 50px;
         }
+
+        strong {
+            font-size: xx-large;
+        }
+        .brand img {
+            max-width: 500px;
+        }
+        .left .nav-title {
+            border-right: solid 2px #000;
+            padding-right: 20px;
+        }
+        .right .nav-title {
+            border-left: solid 2px #000;
+            padding-left: 20px;
+        }
+        .navIcon img {
+            max-width: 80px;
+        }
+        .nav-link {
+            text-align: center;
+        }
+        .left .nav-title p {
+            font-size: x-large;
+            text-align: right;
+        }
+        .right .nav-title p {
+            font-size: x-large;
+            text-align: left;
+        }
+        .left .words {
+            margin-left: 20px;
+        }
+        .right .words {
+            margin-right: 20px;
+        }
+        .nav-item {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -42,47 +81,70 @@
 
                     <ul class="navbar-nav flex grid-item left">
                         <li class="nav-title">
-                            <p>UK TO USA: </p>
+                            <p>UK</p>
+                            <p>TO</p>
+                            <p>USA</p>
                         </li>
                         <li class="nav-item allButton words">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="Index">Words</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+                            <a class="navIcon" asp-area="" asp-controller="wordsUK" asp-action="Index"><img src="/Images/CtPchatIcon.png" /></a>
                         </li>
                         <li class="nav-item allButton weather">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Temp" asp-action="Index">(Weather)</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+                            <a class="navIcon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
                         </li>
-                        <li class="nav-item allButton currency">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="currency" asp-action="Index">(Currency)</a>
+                        <li class="nav-item allButton temperature">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+                            <a class="navIcon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
                         </li>
                         <li class="nav-item allButton tipping">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Tipping" asp-action="Index">Tipping</a>
+                            <a class="navIcon" asp-area="" asp-controller="Tipping" asp-action="Index"><img src="/Images/CtPtipsIcon.png" /></a>
+                        </li>
+                        @*<li class="nav-item allButton measurements">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Measurements" asp-action="Index">(Measurements)</a>
                         </li>
                         <li class="nav-item allButton measurements">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="measurements" asp-action="Index">(Measurements)</a>
-                        </li>
-                        
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Currency" asp-action="Index">(Currency)</a>
+                        </li>*@
+
                     </ul>
 
-                    <a class="navbar-brand flex-grow-1 grid-item center" asp-area="" asp-controller="Home" asp-action="Index">Cross The Pond</a>
+                    <div class="flex-grow-1 grid-item center">
+                        <a class="navbar-brand center brand" asp-area="" asp-controller="Home" asp-action="Index"><strong>Cross The Pond</strong></a>
+                        <a class="navbar-brand center brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/Images/CtP1.png" /></a>
+                    </div>
+
+                    
 
                     <ul class="navbar-nav flex grid-item right">
-                        
-                        <li class="nav-item allButton measurements">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="measurements" asp-action="Index">(Measurements)</a>
+
+                        @*<li class="nav-item allButton measurements">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Currency" asp-action="Index">(Currency)</a>
                         </li>
+                        <li class="nav-item allButton measurements">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Measurements" asp-action="Index">(Measurements)</a>
+                        </li>*@
                         <li class="nav-item allButton tipping">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Tipping" asp-action="Index">Tipping</a>
+                            <a class="navIcon" asp-area="" asp-controller="Tipping" asp-action="Index"><img src="/Images/CtPtipsIcon.png" /></a>
                         </li>
-                        <li class="nav-item allButton currency">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="currency" asp-action="Index">(Currency)</a>
+                        <li class="nav-item allButton temperature">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+                            <a class="navIcon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
                         </li>
                         <li class="nav-item allButton weather">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Temp" asp-action="Index">(Weather)</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+                            <a class="navIcon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
                         </li>
                         <li class="nav-item allButton words">
                             <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="Index">Words</a>
+                            <a class="navIcon" asp-area="" asp-controller="wordsUSA" asp-action="Index"><img src="/Images/CtPchatIcon.png" /></a>
                         </li>
                         <li class="nav-title">
-                            <p>:USA TO UK</p>
+                            <p>USA</p>
+                            <p>TO</p>
+                            <p>UK</p>
                         </li>
 
                     </ul>
