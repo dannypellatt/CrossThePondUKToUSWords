@@ -8,85 +8,110 @@
 
     h1 {
         text-align: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     .grid-container {
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        grid-template-columns: auto;
     }
-
-    .grid-item {
-        background-color: #ccc;
-    }
-
     .left {
+        text-align: center;
+        margin-right: 20px;
+        max-width: 70%;
+    }
+    .right {
+        text-align: center;
+        margin-left: 20px;
+        padding: 20px;
+    }
+    .forecast {
+        border: solid black 1px;
+    }
+    img {
+        max-width: 500px;
+    }
+    .climateFacts {
+        display: inline-grid;
+        grid-template-columns: auto auto;
         text-align: left;
     }
 
-    .center {
-        text-align: center;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .right {
-        text-align: right;
-    }
 </style>
 
-<h1>Weather</h1>
+<h1>Weather In The United Kingdom</h1>
 
-<section>
-    <div class="grid-container">
-        <div class="grid-item left">
-            <br />
-            <h1>Forecast For UK?</h1>
-            <br />
-            <p>City Name: London</p>
-            <p>Temp C: - Temp F:</p>
-            <p>Humidity: </p>
-            <p>Weather: </p>
-        </div>
+<section class="grid-container">
+    <form class="grid-item left">
 
-
-
-        <form class="grid-item center">
-
-            <div class="container">
-                <div class="form-group">
-                    <h2>Forecast For Selected City</h2>
-                    <label asp-for="Name"></label>
-                    <span class="badge alert-primary">@Model.Name</span>
-                    <br />
-                    <label asp-for="Temperature"></label>
-                    <span class="badge alert-primary">@Model.Temperature°C</span>
-                    <br />
-                    <label asp-for="Humidity"></label>
-                    <span class="badge alert-primary">@Model.Humidity</span>
-                    <br />
-                    <label asp-for="Weather"></label>
-                    <span class="badge alert-primary">@Model.Weather</span>
-                    <br />
-
-                    <form method="get">
-                        <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-primary">Go back</button>
-                    </form>
+        <div class="container">
+            <div class="form-group">
+                <p>
+                    The UK has a temperate climate. In general, this means that Britain gets cool, wet winters and warm, wet summers.
+                    It rarely features the extremes of heat or cold, drought or wind that are common in other climates.
+                    The weather conditions are also very changeable.
+                </p>
+                <p>
+                    Not all parts of the UK have the same climate. London, in the south-east of the UK,
+                    is a region characterised by a warm and dry climate in the summer and a cold and dry climate in the winter.
+                </p>
+                <p>
+                    Cumbria, in the mountainous north-west of England, has generally cooler temperatures and more rainfall throughout the year.
+                </p>
+                <p>The general pattern of the climate across the UK has four distinct regions:</p>
+                <br />
+                <div class="climateFacts">
+                    <img src="/Images/weatherUK.png" />
+                    <ul>
+                        <li>south-east – cold winters, warm and dry summers</li>
+                        <li>south-west – mild and very wet winters, warm and wet summers</li>
+                        <li>north-west – mild winter, cool summers and heavy rain all year</li>
+                        <li>north-east – cold winter, cool summers and steady rain all year</li>
+                    </ul>
                 </div>
+
+
+
+
             </div>
-
-            
-        </form>
-
-        <div class="grid-item right">
-            <br />
-            <h1>Forecast For USA?</h1>
-            <br />
-            <p>City Name: Washington DC</p>
-            <p>Temp C: - Temp F:</p>
-            <p>Humidity: </p>
-            <p>Weather: </p>
         </div>
-    </div>
+
+    </form>
+
+
+    <form class="grid-item right">
+
+        <div class="container">
+            <div class="form-group forecast">
+                <h2>Forecast:</h2>
+                <br />
+                <label asp-for="Name"></label>
+                <span class="badge alert-primary">@Model.Name</span>
+                <br />
+                <br />
+                <br />
+                <label asp-for="Temperature"></label>
+                <span class="badge alert-primary">@Model.Temperature°C</span>
+                <br />
+                <br />
+                <label asp-for="Humidity"></label>
+                <span class="badge alert-primary">@Model.Humidity</span>
+                <br />
+                <br />
+                <label asp-for="Weather"></label>
+                <span class="badge alert-primary">@Model.Weather</span>
+                <br />
+                <br />
+                <form method="get">
+                    <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-primary">Go back</button>
+                </form>
+            </div>
+        </div>
+
+    </form>
 
 </section>
 

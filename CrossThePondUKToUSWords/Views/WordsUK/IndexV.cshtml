@@ -1,101 +1,97 @@
 ﻿@model List<wordsUK>
 
-<style>
+    <style>
 
-    .pageTitle {
-        align-content: center;
-        text-align: center
-    }
+        .pageTitle {
+            align-content: center;
+            text-align: center
+        }
 
-    strong {
-        font-size: xx-large;
-        text-decoration: underline;
-    }
+            .pageTitle strong {
+                font-size: xx-large;
+                text-decoration: underline;
+            }
 
-    h1 {
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
 
-    .alphabet {
-        /*    TODO text-align: right;    */
-    }
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
 
-    h2 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .wrd {
-        font-size: 30px;
-        font-weight: bold;
-        margin-left: 15px;
-        margin-right: 0px;
-        border-left: solid 1px black;
-    }
-
-    .emph {
-        font-style: oblique;
-        font-size: 14px;
-    }
-
-    .pro {
-        font-style: italic;
-        font-size: 14px;
-    }
-
-    .def {
-        border-left: solid 1px black;
-        border-right: solid 1px black;
-    }
-
-    .nav-title {
-        font-weight: bold;
-        margin-left: 30px;
-        margin-right: 5px;
-    }
-
-    .allButton {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .title-nav-item {
-        margin-left: 0px;
-    }
-
-    .table {
-        border-top: solid 1px black;
-        border-bottom: solid 1px black;
-    }
-
-    .thead {
-        padding-bottom: 5px;
-        padding-top: 5px;
-        border-bottom: solid 2px black;
-    }
-
-        .thead .def {
+        .wrd {
             font-size: 30px;
             font-weight: bold;
-            text-decoration: underline;
-            padding-left: 5px;
+            margin-left: 15px;
+            margin-right: 0px;
+            border-left: solid 1px black;
         }
 
-        .thead .wrd {
-            text-decoration: underline;
-            padding-left: 5px;
+        .emph {
+            font-style: oblique;
+            font-size: 14px;
         }
 
-    .brit {
-        max-width: 25%;
-    }
+        .navitem {
+            padding-left: 10px;
+        }
 
-    .mrcn {
-        max-width: 25%;
-    }
-</style>
+        .pro {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .def {
+            border-left: solid 1px black;
+            border-right: solid 1px black;
+        }
+
+        .title-nav-item {
+            margin-left: 7px;
+            text-decoration: underline;
+        }
+
+        .noLink {
+            padding-left: 12px;
+            padding-right: 12px;
+            text-decoration: none;
+        }
+
+        .table {
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+
+        .thead {
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border-bottom: solid 2px black;
+        }
+
+            .thead .def {
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: underline;
+                padding-left: 5px;
+            }
+
+            .thead .wrd {
+                text-decoration: underline;
+                padding-left: 5px;
+            }
+
+        .brit {
+            max-width: 25%;
+        }
+
+        .mrcn {
+            max-width: 25%;
+        }
+    </style>
 
     <h1>UK to USA</h1>
     <div class="pageTitle">

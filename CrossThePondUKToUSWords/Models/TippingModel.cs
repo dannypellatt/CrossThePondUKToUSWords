@@ -3,13 +3,13 @@ namespace CrossThePondUKToUSWords.Models
 {
     public class TippingModel
     {
-       public double valueBill { get; set; }
+       public double ValueBill { get; set; }
 
-        public double result { get; set; }
+        public double Result { get; set; }
 
-        public double total { get; set; }
+        public double Total { get; set; }
 
-        public string calculate { get; set; }
+        public string? Calculate { get; set; }
 
     }
 }

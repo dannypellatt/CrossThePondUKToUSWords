@@ -2,13 +2,118 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <br />
-    <br />
-    <h1 class="display-4">Make this homepage nice - add images/icons for links</h1>
+<style>
+    .grid-container {
+        display: block;
+        grid-template-columns: auto auto auto;
+        text-align: center;
+    }
 
+    .homeSection {
+        display: inline-grid;
+    }
+    .left img {
+    }
+    .mainPageGrid {
 
+    }
+    .mainPageGrid .center {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .right {
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .navButton img {
+        max-width: 200px;
+        padding-bottom: 50px;
+    }
 
-</div>
+        .navButton img:hover {
+            max-width: 200px;
+            padding-bottom: 50px;
+            max-width: 210px;
+        }
+    .underlined {
+        font-size: small;
+    }
+</style>
+
+<main class="main">
+    <div class="grid-container mainPageGrid">
+        <div class="grid-item homeSection left">
+            <p>for those holidaying in the US:</p>
+        </div>
+        <div class="grid-item homeSection center">
+        </div>
+        <div class="grid-item homeSection right">
+            <p>for those vacationing in the UK:</p>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item homeSection left">
+            <a class="navIcon navButton" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+        </div>
+
+        <div class="grid-item homeSection center">
+            <h2>words</h2>
+
+        </div>
+
+        <div class="grid-item homeSection right">
+            <a class="navIcon navButton" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item homeSection left">
+            <a class="navIcon navButton" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+        </div>
+
+        <div class="grid-item homeSection center">
+            <h2>weather</h2>
+        </div>
+
+        <div class="grid-item homeSection right">
+            <a class="navIcon navButton" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item homeSection left">
+            <a class="navIcon navButton" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+        </div>
+
+        <div class="grid-item homeSection center">
+            <h2>temperature</h2>
+        </div>
+
+        <div class="grid-item homeSection right">
+            <a class="navIcon navButton" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item homeSection left">
+            <a class="navIcon navButton" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
+        </div>
+
+        <div class="grid-item homeSection center">
+            <h2>tipping</h2>
+
+        </div>
+
+        <div class="grid-item homeSection right">
+            <a class="navIcon navButton" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
+        </div>
+    </div>
+
+</main>
+
 
 
