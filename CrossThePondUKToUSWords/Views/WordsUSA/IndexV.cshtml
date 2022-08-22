@@ -1,181 +1,192 @@
 ﻿@model List<wordsUK>
 
-    <style>
+<style>
 
-        .pageTitle {
-            align-content: center;
-            text-align: center
-        }
+    @*START top-bar SECTION*@
 
-            .pageTitle strong {
-                font-size: xx-large;
-                text-decoration: underline;
-            }
+    .top-bar {
+        min-height: 170px;
+    }
+    .nav-list {
+        display: inline-flex;
+        text-align: center;
+    }
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+    .swapper img {
+        max-height: 140px;
+        padding-left: 200px;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
+    @*END top-bar SECTION*@
 
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
+    @*START heading SECTION*@
 
-        .wrd {
-            font-size: 30px;
-            font-weight: bold;
-            margin-left: 15px;
-            margin-right: 0px;
-            border-left: solid 1px black;
-        }
+    .heading {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
 
-        .emph {
-            font-style: oblique;
-            font-size: 14px;
-        }
+    @*END heading SECTION*@
 
-        .navitem {
-            padding-left: 10px;
-        }
+    @*START alphabet SECTION*@
 
-        .pro {
-            font-style: italic;
-            font-size: 14px;
-        }
+    .alphabet-section ul {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .alphabet-nav-item {
+        display: inline-flex;
+        text-align: center;
+        padding: 10px;
+    }
+    .alphabet-nav-item a {
+        color: #000;
+        font-size: xx-large;
+    }
 
-        .def {
-            border-left: solid 1px black;
-            border-right: solid 1px black;
-        }
+    @*END alphabet SECTION*@
 
-        .title-nav-item {
-            margin-left: 7px;
-            text-decoration: underline;
-        }
+    @*START table SECTION*@
 
-        .noLink {
-            padding-left: 12px;
-            padding-right: 12px;
-            text-decoration: none;
-        }
+    .wrd {
+        font-size: xx-large;
+    }
+    .def {
+        font-size: larger;
+    }
+    .thead .def {
+        font-size: xx-large;
+    }
+    .table .pro {
+        padding-right: 50px;
+    }
+    .table {
+        padding: 1rem 0.5rem;
+    }
+    .table > :not(caption) > * > * {
+        padding: 2rem 0.5rem;
+    }
+        @*END table SECTION*@
 
-        .table {
-            border-top: solid 1px black;
-            border-bottom: solid 1px black;
-        }
+</style>
 
-        .thead {
-            padding-bottom: 5px;
-            padding-top: 5px;
-            border-bottom: solid 2px black;
-        }
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUSA" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUK">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="WordsUK" asp-action="IndexV"><img src="/Images/SwapperUStoUK.png" /></a>
+        </li>
+    </ul>
+</section>
 
-            .thead .def {
-                font-size: 30px;
-                font-weight: bold;
-                text-decoration: underline;
-                padding-left: 5px;
-            }
+<div class="heading">
+    <h1>USA TO UK</h1>
+</div>
 
-            .thead .wrd {
-                text-decoration: underline;
-                padding-left: 5px;
-            }
-
-        .brit {
-            max-width: 25%;
-        }
-
-        .mrcn {
-            max-width: 25%;
-        }
-    </style>
-
-<h1>USA to UK</h1>
-<div class="pageTitle">
-    <div>
-        @*<li class="nav-item allButton">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="Index">ALL</a>
-        </li>*@
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexA">A</a>
+<div class="alphabet-section">
+    <ul>
+        @*<li class="title-nav-item allButton">
+                <a class="nav-link text-dark" asp-area="" asp-controller="wordsUK" asp-action="Index">ALL</a>
+            </li>*@
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexA">A</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexB">B</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexB">B</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexC">C</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexC">C</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexD">D</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexD">D</a>
         </li>
-        @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexE">E</a>
-        </li>*@
-        <li class="title-nav-item noLink">e</li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexF">F</a>
+        @*<li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexE">E</a>
+            </li>*@
+        <li class="alphabet-nav-item noLink">e</li>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexF">F</a>
         </li>
-        @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexG">G</a>
-        </li>*@
-        <li class="title-nav-item noLink">g</li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexH">H</a>
+        @*<li class="alphabet-nav-item">
+                <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexG">G</a>
+            </li>*@
+        <li class="alphabet-nav-item noLink">g</li>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexH">H</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexI">I</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexI">I</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexJ">J</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexJ">J</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexK">K</a>
+        @*<li class="alphabet-nav-item">
+                <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexK">K</a>
+            </li>*@
+        <li class="alphabet-nav-item noLink">k</li>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexL">L</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexL">L</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexM">M</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexM">M</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexN">N</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexN">N</a>
+        @*<li class="alphabet-nav-item">
+                <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexO">O</a>
+            </li>*@
+        <li class="alphabet-nav-item noLink">o</li>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexP">P</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexO">O</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexQ">Q</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexP">P</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexR">R</a>
         </li>
-        @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexQ">Q</a>
-        </li>*@
-        <li class="title-nav-item noLink">q</li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexR">R</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexS">S</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexS">S</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexT">T</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexT">T</a>
+        @*<li class="alphabet-nav-item">
+                <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexU">U</a>
+            </li>*@
+        <li class="alphabet-nav-item noLink">u</li>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexV"><strong>V</strong></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexU">U</a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexW">W</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexV"><strong>V</strong></a>
+        <li class="alphabet-nav-item">
+            <a class="alphabet-link" asp-area="" asp-controller="wordsUSA" asp-action="IndexXYZ">XYZ</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexW">W</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="wordsUSA" asp-action="IndexXYZ">XYZ</a>
-        </li>
-    </div>
-
+    </ul>
 </div>
 
 <table class="table">

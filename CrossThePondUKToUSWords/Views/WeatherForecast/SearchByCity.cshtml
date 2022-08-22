@@ -5,20 +5,80 @@
 }
 
 <style>
-    .container {
-        max-width: 600px;
+
+    @*START top-bar SECTION*@
+
+    .top-bar {
+        min-height: 170px;
+    }
+
+    .nav-list {
+        display: inline-flex;
         text-align: center;
     }
-    h1 {
+
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+
+    .nav-icon img:hover {
+        max-height: 135px;
+    }
+
+    .swapper img {
+        max-height: 150px;
+        padding-left: 200px;
+
+    }
+
+    .swapper img:hover {
+        max-height: 160px;
+        padding-left: 200px;
+    }
+
+    @*END top-bar SECTION*@
+
+    @*START heading SECTION*@
+
+    .heading {
+        text-align: center;
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
-    button {
-        margin: 30px;
-    }
+
+    @*END heading SECTION*@
 
 </style>
 
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/SwapperUStoUK.png" /></a>
+        </li>
+    </ul>
+</section>
+
+<div class="heading">
+    <h1>UK TO USA</h1>
+</div>
 
 <div class="container">
     <form method="post">

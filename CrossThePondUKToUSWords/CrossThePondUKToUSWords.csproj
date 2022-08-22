@@ -20,6 +20,7 @@
     <None Remove="RestSharp" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Views\Conversion\" />
+    <None Remove="Views\Welcome\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -37,10 +38,12 @@
     <Folder Include="Repositories\" />
     <Folder Include="Views\Conversion\" />
     <Folder Include="wwwroot\Images\" />
+    <Folder Include="Views\Welcome\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Images\CtP1.png" />
     <Content Remove="wwwroot\Images\" />
+    <Content Remove="wwwroot\Images\CtP2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\Images\CtP1.png" />

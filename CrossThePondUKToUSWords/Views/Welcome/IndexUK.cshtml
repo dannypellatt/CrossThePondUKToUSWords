@@ -1,0 +1,152 @@
+﻿@model CrossThePondUKToUSWords.Models.WelcomeModel
+
+<style>
+
+    @*START top-bar SECTION*@
+
+    .top-bar {
+        min-height: 170px;
+    }
+
+    .nav-list {
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+    .swapper img {
+        max-height: 140px;
+        padding-left: 200px;
+
+    }
+    @*END top-bar SECTION*@
+
+    @*START heading SECTION*@
+
+    .heading {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    @*END heading SECTION*@
+
+    @*START page SECTION*@
+    .welcome-main {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+    .main-page-option {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+    .main-page-options img {
+        max-width: 180px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    .welcome-main-left {
+        padding-right: 50px;
+    }
+    .welcome-main-left img {
+        max-width: 550px;
+    }
+
+    @*END page SECTION*@
+
+</style>
+
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUSA" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="Welcome" asp-action="IndexUS"><img src="/Images/SwapperUStoUK.png" /></a>
+        </li>
+    </ul>
+</section>
+
+<div class="heading">
+    <h1>USA TO UK</h1>
+</div>
+
+    <div class="welcome-main">
+        <div class="welcome-main-left">
+            <h2>Welcome to the United Kingdom!</h2>
+            <p>Home of Stonehenge and sandwiches, Queen and castles, Bond and The Beatles</p>
+            <div>
+                <img src="/Images/brit_tin.png" alt="UK" />
+            </div>
+        </div>
+
+        <div class="welcome-main-right">
+            <div class="main-page-options">
+                <p>pick an option:</p>
+                <br />
+                <div class="main-page-option words">
+                    <div>
+                        <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+                    </div>
+                    <div>
+                        <h3>Words: </h3>
+                        <br />
+                        <p>We share a common language... for the most part. Here's a list of words that may be a little confusing</p>
+                    </div>
+                </div>
+                <div class="main-page-option words">
+                    <div>
+                        <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+                    </div>
+                    <div>
+                        <h3>Weather: </h3>
+                        <br />
+                        <p>The weather seems to change ten times an hour! Maybe that's why they talk about it so much?</p>
+                    </div>
+                </div>
+                <div class="main-page-option words">
+                    <div>
+                        <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+                    </div>
+                    <div>
+                        <h3>Temperature: </h3>
+                        <br />
+                        <p>Celcius... Fahrenheit... Do I need to pack a sweater or what?</p>
+                    </div>
+                </div>
+                <div class="main-page-option words">
+                    <div>
+                        <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
+                    </div>
+                    <div>
+                        <h3>Tipping: </h3>
+                        <br />
+                        <p>You don't really have to tip!? Surely that can't be right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

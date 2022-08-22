@@ -6,43 +6,97 @@
 
 <style>
 
-    h1 {
-        text-align: center;
-        padding-top: 100px;
-        padding-bottom: 100px;
+    @*START top-bar SECTION*@
+
+    .top-bar {
+        min-height: 170px;
     }
 
-    .grid-container {
-        align-items: center;
-        justify-content: center;
+    .nav-list {
         display: inline-flex;
-        grid-template-columns: auto;
-    }
-    .left {
         text-align: center;
-        margin-right: 20px;
-        max-width: 70%;
     }
-    .right {
+
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
         text-align: center;
-        margin-left: 20px;
-        padding: 20px;
     }
+
+    .nav-icon img:hover {
+        max-height: 135px;
+    }
+
+    .swapper img {
+        max-height: 150px;
+        padding-left: 200px;
+
+    }
+
+    .swapper img:hover {
+        max-height: 160px;
+        padding-left: 200px;
+    }
+
+    @*END top-bar SECTION*@
+
+    @*START heading SECTION*@
+
+    .heading {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    @*END heading SECTION*@
+
+    @*START main SECTION*@
+
     .forecast {
         border: solid black 1px;
     }
-    img {
-        max-width: 500px;
+
+    .climate-facts img {
+        max-width: 300px;
     }
-    .climateFacts {
+
+    .climate-facts {
         display: inline-grid;
         grid-template-columns: auto auto;
         text-align: left;
     }
 
+    @*END main SECTION*@
+
 </style>
 
-<h1>Weather In The United Kingdom</h1>
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="WordsUSA" asp-action="IndexXYZ"><img src="/Images/SwapperUStoUK.png" /></a>
+        </li>
+    </ul>
+</section>
+
+<div class="heading">
+    <h1>UK TO USA</h1>
+</div>
 
 <section class="grid-container">
     <form class="grid-item left">
@@ -72,10 +126,6 @@
                         <li>north-east – cold winter, cool summers and steady rain all year</li>
                     </ul>
                 </div>
-
-
-
-
             </div>
         </div>
 

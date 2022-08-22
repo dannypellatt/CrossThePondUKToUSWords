@@ -1,68 +1,18 @@
 ﻿html {
-  font-size: 18px;
+    font-size: 14px;
 }
 
-@media (min-width: 800px) {
-  html {
-    font-size: 20px;
-  }
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
-}
-
-.container-fluid {
-    border-bottom: solid 2px black;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    width: 100%;
-}
-
-navbar-nav {
-    width: 100%;
-}
-
-nav {
-    width: 100%;
-}
-
-.navbar-brand {
-    text-align: center;
-}
-
-.menu-right {
-    float: right;
-}
-
-.menu-left {
-    float: left;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
     margin-bottom: 60px;
-    background-color: white;
 }
-
-.pageTitle {
-    display: inline-flex;
-}
-
-.pageTitle li {
-    display: inline-flex;
-}
-
-.measurements {
-    text-decoration: line-through;
-    font-style: italic;
-}
-/*This doesn't work - figure out why*/
-
-/*.nav-link:active:after {
-    text-decoration: underline;
-}*/
-
-/*Looks like I can't do this with just CSS, must use javascript)*/
-
-

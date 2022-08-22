@@ -18,10 +18,28 @@ namespace CrossThePondUKToUSWords.Controllers
             return View();
         }
 
-
         [HttpPost]
 
         public IActionResult Index(TempModel cal)
+        {
+            double a = cal.valueTemp;
+
+            if (cal.calculate == "Fahrenheit to Celcius")
+            {
+                cal.result = (a - 32) * (5 / 9);
+
+            }
+            if (cal.calculate == "Celcius to Fahrenheit")
+            {
+                cal.result = (a * 9) / 5 + 32;
+
+            }
+
+            ViewData["result"] = cal.result;
+            return View();
+        }
+
+        public IActionResult IndexUS(TempModel cal)
         {
             double a = cal.valueTemp;
 

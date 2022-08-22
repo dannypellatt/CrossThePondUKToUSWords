@@ -3,93 +3,159 @@
 
 <style>
 
-    .grid-container {
-        display: inline-grid;
-        grid-template-columns: auto auto auto;
-    }
-    .left {
-        text-align: center;
-    }
-    .calc {
-        text-align: center;
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    .right {
-        text-align: right;
-    }
+    @*START top-bar SECTION*@
 
-    h1 {
-        text-align: center;
-        padding-top: 100px;
-        padding-bottom: 100px;
+    .top-bar {
+        min-height: 170px;
     }
-    .result {
+    .nav-list {
         display: inline-flex;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .resultBox {
-
-    }
-    .notes {
-        padding-top: 50px;
-        font-style: italic;
-    }
-    input {
         text-align: center;
     }
-    .italic {
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+    .swapper img {
+        max-height: 140px;
+        padding-left: 200px;
+    }
+
+    @*END top-bar SECTION*@
+
+    @*START heading SECTION*@
+
+    .heading {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @*END heading SECTION*@
+
+    @*START main SECTION*@ .tipping-main {
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .tipping-main-element {
+        border: solid 1px #BEBEBE;
+        padding: 20px;
+    }
+
+    .tipping-main-left {
+    }
+
+    .tipping-main-right {
+        min-width: 35%;
+        padding: 20px;
+        margin-left: 30px;
+    }
+
+    .tipping-main-element h3 {
+        text-align: left;
+    }
+
+    .tipping-main-heading {
+        margin-bottom: 30px;
+    }
+
+    .notes {
         font-style: italic;
     }
+
+    p {
+        font-size: larger;
+    }
+
+    @*END main SECTION*@
 
 </style>
 
-<h1>Tipping in the United States</h1>
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/SwapperUKtoUS2.png" /></a>
+        </li>
+    </ul>
+</section>
 
-<section >
-        <div class="grid-container">
-            <div class="grid-item left">
-                <h3>Tipping Explained:</h3>
+<div class="heading">
+    <h1>UK TO USA</h1>
+</div>
+
+
+<section class="tipping-main">
+    <div class="tipping-main-left">
+        <div class="tipping-main-element tipping-main-heading">
+            <h2>
+                Tipping in the United States</h2>
                 <br />
-                <p>
-                    Tipping in the United States is standard practice. It's important as the country does not have universal high wages.
-                    Tipping etiquette is an outlier, due to the way that the United States operates.
-                </p>
-                <p>
-                    The practice of tipping became formalized across the US in the 1960s.
-                    Congress enacted regulations around federal minimum wages and ultimately determined that
-                    entry-level service jobs receiving at least $30 a month in tips required only a minimum wage of $2.13/hr.
-                    With this law, the ‘service industry’ was formalized and a status quo set.
-                </p>
-                <p>
-                    Today, the federal minimum wage for those working positions is <italic>still</italic> $2.13/hr.
-                    The rest of their income is solely from tips.
-                    This means, for those working full time in these positions, their total monthly salary is only $340.80
-                    Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
-                </p>
-                <p>
-                    To the right you'll find a rough guide to tipping in some common interactions.
-                </p>
-                <p class="notes">Tipping is not necessary for stores, coffee shops, hotel cleaning staff, however, if you feel like it, $1-$5 is always appreciated.</p>
+        </div>
+        <div class="tipping-main-element">
+            <h3>Explained:</h3>
+            <br />
+            <p>
+                Tipping in the United States is standard practice. It's important as the country does not have universal high wages.
+                Tipping etiquette is an outlier, due to the way that the United States operates.
+            </p>
+            <p>
+                The practice of tipping became formalized across the US in the 1960s.
+                Congress enacted regulations around federal minimum wages and ultimately determined that
+                entry-level service jobs receiving at least $30 a month in tips required only a minimum wage of $2.13/hr.
+                With this law, the ‘service industry’ was formalized and a status quo set.
+            </p>
+            <p>
+                Today, the federal minimum wage for those working positions is <italic>still</italic> $2.13/hr.
+                The rest of their income is solely from tips.
+                This means, for those working full time in these positions, their total monthly salary is only $340.80
+                Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
+            </p>
+            <p>
+                Also, remember that tax is not usually included in the given price, so prepare to pay more.
+            </p>
+            <p>
+                To the right you'll find a rough guide to tipping in some common interactions.
+            </p>
+            <br />
+            <br />
+            <p class="notes">Tipping is not necessary for stores, coffee shops, hotel cleaning staff, however, if you feel like it, $1-$5 is always appreciated.</p>
+        </div>
+    </div>
 
-
-            </div>
-
-            <form class="grid-item center calc" asp-action="IndexUS">
+        <div class="tipping-main-element tipping-main-right">
+            <h3>Calculator:</h3>
+            <form asp-action="IndexUS">
                 <label>Amount:</label>
                 <p><input type="number" asp-for="ValueBill" /></p>
+                <br />
 
-                @*<p><input type="submit" value="Tip: 10" asp-for="calculate" /></p>*@
-            <p><input type="submit" value="Tip: 25" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+                <p><input type="submit" value="Tip: 25" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with exceptional service</p>
                 <p><input type="submit" value="Tip: 20" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with good service, car-rides</p>
                 <p><input type="submit" value="Tip: 15" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with poor service</p>
+                <br />
                 <div class="grid-container result">
                     <div class="grid-item center resultBox">
-
                         <label>Tip:</label>
                         <p><input type="number" asp-for="@ViewData["result"]" /></p>
                     </div>
@@ -98,25 +164,16 @@
                         <p><input type="number" asp-for="@ViewData["total"]" /></p>
                     </div>
                 </div>
-                        <br />
-                        <p>$1-$5 standard at:</p>
-                        <p>for hotel cleaning staff</p>
-                        <p>$1-$2 standard at:</p>
-                        <p>at a bar per drink, </p>
-
+                <br />
+                <p>$1-$5 standard at:</p>
+                <p>for hotel cleaning staff</p>
+                <p>$1-$2 standard at:</p>
+                <p>at a bar per drink, </p>
             </form>
+        </div>
 
-        @*<div class="grid-item right">
-            <br />
-            <p>Standard UK tipping guidelines:</p>
-            <p>10% at sit-down restaurants with tab</p>
-            <p>£0 per drink at a bar *</p>
-            <p>£1-£5 for car rides, delivery, tours, housekeeping</p>
-            <p>£0 at counters (fast food, coffee, tickets etc.) *</p>
-            <p class="notes">*If you feel like the person helping has gone the extra mile, feel free to tip $£1-£5</p>
-        </div>*@
-    </div>
-    
 </section>
+
+
 
 

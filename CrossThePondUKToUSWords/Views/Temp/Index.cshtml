@@ -1,28 +1,155 @@
 ﻿@model CrossThePondUKToUSWords.Models.TempModel
 
-    <style>
+<style>
 
-        h1 {
-            text-align: center;
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-    </style>
+    @*START top-bar SECTION*@
+    .top-bar {
+        min-height: 170px;
+    }
+    .nav-list {
+        display: inline-flex;
+        text-align: center;
+    }
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+    .swapper img {
+        max-height: 140px;
+        padding-left: 200px;
+    }
+    @*END top-bar SECTION*@
 
-<h1>Temperature</h1>
+    @*START heading SECTION*@
+    .heading {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @*END heading SECTION*@
 
+    @*START main SECTION*@
+    .temp-main {
+        display: inline-flex;
+        text-align: center;
+    }
+    .temp-main-element {
+        border: solid 1px #BEBEBE;
+        padding: 20px;
+    }
+    .temp-main-left {
+    }
+    .temp-main-right {
+        min-width: 35%;
+        padding: 20px;
+        margin-left: 30px;
+    }
+    .temp-main-element h3 {
+        text-align: left;
+    }
+    .temp-main-heading {
+        margin-bottom: 30px;
+    }
+    .notes {
+        font-style: italic;
+    }
+    p {
+        font-size: larger;
+    }
 
-<div>
-    <form class="grid-item center" asp-action="Index">
-        <label>Type in temp you want to convert</label>
-        <p><input type="number" asp-for="valueTemp" /></p>
+    .temp-main-element img {
+        max-width: 300px;
+    }
 
-        <p><input type="submit" value="Fahrenheit to Celcius" asp-for="calculate" /></p>
-        <p><input type="submit" value="Celcius to Fahrenheit" asp-for="calculate" /></p>
+    .climate-facts {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+    @*END main SECTION*@
 
-        <label>Result:</label>
-        <p><input type="number" asp-for="@ViewData["result"]" /></p>
+</style>
 
-    </form>
+<section class="top-bar">
+    <ul class="nav-list">
+        <li class="nav-element nav-link words">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WordsUSA" asp-action="IndexA">Words</a>
+        </li>
+        <li class="nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        </li>
+        <li class="nav-element nav-link temperature">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        </li>
+        <li class="nav-element nav-link tipping">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUK">Tipping</a>
+        </li>
+        <li class="nav-element nav-link swapper">
+            <a class="nav-swapper" asp-area="" asp-controller="Temp" asp-action="IndexUS"><img src="/Images/SwapperUStoUK.png" /></a>
+        </li>
+    </ul>
+</section>
 
+<div class="heading">
+    <h1>USA TO UK</h1>
 </div>
+
+<section class="temp-main">
+    <div class="temp-main-left">
+        <div class="temp-main-element temp-main-heading">
+            <h2>
+                Temperature
+            </h2>
+            <br />
+        </div>
+        <div class="temp-main-element">
+            <h3>Explained:</h3>
+            <br />
+            <p>
+                The UK has a temperate climate. In general, this means that Britain gets cool, wet winters and warm, wet summers.
+                It rarely features the extremes of heat or cold, drought or wind that are common in other climates.
+                The weather conditions are also very changeable.
+            </p>
+            <p>
+                Not all parts of the UK have the same climate. London, in the south-east of the UK,
+                is a region characterised by a warm and dry climate in the summer and a cold and dry climate in the winter.
+                Cumbria, in the mountainous north-west of England, has generally cooler temperatures and more rainfall throughout the year.
+            </p>
+            
+            <br />
+            <div class="climate-facts">
+                <img src="/Images/weatherUK.png" />
+                <ul>
+                    <p>The general pattern of the climate across the UK has four distinct regions:</p>
+                    <br />
+                    <li>south-east – cold winters, warm and dry summers</li>
+                    <li>south-west – mild and very wet winters, warm and wet summers</li>
+                    <li>north-west – mild winter, cool summers and heavy rain all year</li>
+                    <li>north-east – cold winter, cool summers and steady rain all year</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="temp-main-element temp-main-right">
+        <h3>Calculator:</h3>
+        <br />
+        <form class="" asp-action="Index">
+            <p>Type in temp you want to convert</p>
+            <p><input type="number" asp-for="valueTemp" /></p>
+
+            <p><input type="submit" value="Fahrenheit to Celcius" asp-for="calculate" /></p>
+            <p><input type="submit" value="Celcius to Fahrenheit" asp-for="calculate" /></p>
+
+            <label>Result:</label>
+            <p><input type="number" asp-for="@ViewData["result"]" /></p>
+
+        </form>
+    </div>
+
+</section>

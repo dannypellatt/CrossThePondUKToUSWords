@@ -3,115 +3,116 @@
 }
 
 <style>
-    .grid-container {
-        display: block;
-        grid-template-columns: auto auto auto;
+
+
+    @*START top-bar SECTION*@
+
+    .top-bar {
+        min-height: 170px;
+    }
+    .nav-list {
+        display: inline-flex;
         text-align: center;
     }
+    .nav-link img {
+        display: inline;
+        max-height: 120px;
+        text-align: center;
+    }
+    .swapper img {
+        max-height: 140px;
+        padding-left: 200px;
+        
+    }
 
-    .homeSection {
+    @*END top-bar SECTION*@
+
+    @*START heading SECTION*@
+
+    .heading {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    @*END heading SECTION*@
+
+    @*START page SECTION*@
+
+    .grid-container {
         display: inline-grid;
+        grid-template-columns: auto auto auto;
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
-    .left img {
+    .homeSection img {
+        max-height: 600px;
+        min-height: 600px;
     }
-    .mainPageGrid {
-
-    }
-    .mainPageGrid .center {
-        padding-left: 100px;
-        padding-right: 100px;
+    .pondImg img {
+        max-height: 100px;
+        margin-top: 280px;
     }
     .right {
         text-align: center;
     }
+    #sea {
+        max-height: 300px;
+    }
+    #planeleft {
+        float: right;
+    }
+    #planeright {
+        float: left;
+    }
+    #pond {
+        display: block;
+    }
     h1 {
         text-align: center;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 50px;
     }
-    .navButton img {
-        max-width: 200px;
-        padding-bottom: 50px;
+    h2 {
+        text-align: center;
+        text-decoration: underline;
     }
 
-        .navButton img:hover {
-            max-width: 200px;
-            padding-bottom: 50px;
-            max-width: 210px;
-        }
-    .underlined {
-        font-size: small;
-    }
+    @*END page SECTION*@
+
 </style>
 
-<main class="main">
-    <div class="grid-container mainPageGrid">
-        <div class="grid-item homeSection left">
-            <p>for those holidaying in the US:</p>
-        </div>
-        <div class="grid-item homeSection center">
-        </div>
-        <div class="grid-item homeSection right">
-            <p>for those vacationing in the UK:</p>
-        </div>
-    </div>
-    <div class="grid-container">
-        <div class="grid-item homeSection left">
-            <a class="navIcon navButton" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
+<h1>CROSS THE POND</h1>
+
+<div class="heading">
+    <h1>All you need to know for your transatlantic trip</h1>
+</div>
+
+
+<br />
+<h2>choose your destination</h2>
+
+<div class="grid-container">
+    <div class="grid-item left">
+        <div class="homeSection">
+            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUS"><img src="images/USofA.png" alt="UK to USA" /></a>            
         </div>
 
-        <div class="grid-item homeSection center">
-            <h2>words</h2>
 
-        </div>
-
-        <div class="grid-item homeSection right">
-            <a class="navIcon navButton" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-        </div>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-item homeSection left">
-            <a class="navIcon navButton" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-        </div>
-
-        <div class="grid-item homeSection center">
-            <h2>weather</h2>
-        </div>
-
-        <div class="grid-item homeSection right">
-            <a class="navIcon navButton" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
+    <div class="grid-item center pond">
+        <div class="pondImg">
+            <p></p><img class="pondImg" id="sea" src="images/sea.png" alt="UK to USA" />
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-item homeSection left">
-            <a class="navIcon navButton" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
-        </div>
-
-        <div class="grid-item homeSection center">
-            <h2>temperature</h2>
-        </div>
-
-        <div class="grid-item homeSection right">
-            <a class="navIcon navButton" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
+    <div class="grid-item right">
+        <div class="homeSection">
+            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUK"><img src="images/brit_tin.png" alt="USA to UK" /></a>
         </div>
     </div>
+</div>
 
-    <div class="grid-container">
-        <div class="grid-item homeSection left">
-            <a class="navIcon navButton" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
-        </div>
-
-        <div class="grid-item homeSection center">
-            <h2>tipping</h2>
-
-        </div>
-
-        <div class="grid-item homeSection right">
-            <a class="navIcon navButton" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
-        </div>
-    </div>
 
 </main>
 
