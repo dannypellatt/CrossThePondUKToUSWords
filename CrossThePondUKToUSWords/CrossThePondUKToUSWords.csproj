@@ -21,6 +21,7 @@
     <None Remove="Newtonsoft.Json" />
     <None Remove="Views\Conversion\" />
     <None Remove="Views\Welcome\" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -39,6 +40,7 @@
     <Folder Include="Views\Conversion\" />
     <Folder Include="wwwroot\Images\" />
     <Folder Include="Views\Welcome\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Images\CtP1.png" />

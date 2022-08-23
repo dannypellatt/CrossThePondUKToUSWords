@@ -10,7 +10,7 @@ namespace CrossThePondUKToUSWords.Repositories
         public WeatherResponse GetForecast(string city)
         {
             string APP_ID = Configuration.Values.OPEN_WEATHER_APP_ID;
-            var client = new RestClient($"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={APP_ID}");
+            var client = new RestClient($"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid={APP_ID}");
             var request = new RestRequest();
             var response = client.Execute(request);
             if(response.IsSuccessful)
@@ -24,10 +24,10 @@ namespace CrossThePondUKToUSWords.Repositories
             }
         }
 
-        public WeatherResponse GetForecastImperial(string city)
+        public WeatherResponse GetForecastMetric(string city, string state)
         {
             string APP_ID = Configuration.Values.OPEN_WEATHER_APP_ID;
-            var client = new RestClient($"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid={APP_ID}");
+            var client = new RestClient($"https://api.openweathermap.org/data/2.5/weather?q={city},{state}&units=metricUSA&appid={APP_ID}");
             var request = new RestRequest();
             var response = client.Execute(request);
             if (response.IsSuccessful)

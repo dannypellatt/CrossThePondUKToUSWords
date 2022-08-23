@@ -19,12 +19,12 @@ namespace CrossThePondUKToUSWords.Controllers
         {
             double a = cal.ValueBill;
 
-            if (cal.Calculate == "Tip: 10")
+            if (cal.Calculate == "Tip: 10%")
             {
                 cal.Result = a * 0.10;
                 cal.Total = a + (a * 0.10);
             }
-            if (cal.Calculate == "Tip: 15")
+            if (cal.Calculate == "Tip: 15%")
             {
                 cal.Result = a * 0.15;
                 cal.Total = a + (a * 0.15);
@@ -40,17 +40,17 @@ namespace CrossThePondUKToUSWords.Controllers
         {
             double a = cal.ValueBill;
 
-            if (cal.Calculate == "Tip: 15")
+            if (cal.Calculate == "Tip: 15%")
             {
                 cal.Result = a * 0.15;
                 cal.Total = a + (a * 0.15);
             }
-            if (cal.Calculate == "Tip: 20")
+            if (cal.Calculate == "Tip: 20%")
             {
                 cal.Result = a * 0.2;
                 cal.Total = a + (a * 0.2);
             }
-            if (cal.Calculate == "Tip: 25")
+            if (cal.Calculate == "Tip: 25%")
             {
                 cal.Result = a * 0.25;
                 cal.Total = a + (a * 0.25);

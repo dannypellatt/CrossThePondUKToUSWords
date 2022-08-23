@@ -29,8 +29,11 @@
 
     .heading {
         text-align: center;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .heading h1 {
+        font-size: 80px;
     }
 
     @*END heading SECTION*@
@@ -69,28 +72,24 @@
     <ul class="nav-list">
         <li class="nav-element nav-link words">
             <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WordsUSA" asp-action="IndexA">Words</a>
         </li>
-        <li class="nav-link weather">
-            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        <li class="nav-element nav-link weather">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img class="top-bar-image" src="/Images/CtPweatherIcon.png" /></a>
         </li>
         <li class="nav-element nav-link temperature">
             <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
         </li>
         <li class="nav-element nav-link tipping">
             <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
         </li>
         <li class="nav-element nav-link swapper">
-            <a class="nav-swapper" asp-area="" asp-controller="Welcome" asp-action="IndexUS"><img src="/Images/SwapperUStoUK.png" /></a>
+            <a class="nav-swapper" asp-area="" asp-controller="Welcome" asp-action="IndexUS"> <img src="/Images/SwapperUStoUK.png"/></a>
         </li>
     </ul>
 </section>
 
 <div class="heading">
-    <h1>USA TO UK</h1>
+    <h1> USA TO UK </h1>
 </div>
 
     <div class="welcome-main">
@@ -113,7 +112,7 @@
                     <div>
                         <h3>Words: </h3>
                         <br />
-                        <p>We share a common language... for the most part. Here's a list of words that may be a little confusing</p>
+                        <p>We share a common language... for the most part. Here's a list of words that may be a little confusing.</p>
                     </div>
                 </div>
                 <div class="main-page-option words">

@@ -6,7 +6,7 @@ namespace CrossThePondUKToUSWords.Repositories
     public interface IWForecastRepository
     {
         WeatherResponse GetForecast(string city);
-        WeatherResponse GetForecastImperial(string city);
+        WeatherResponse GetForecastMetric(string city, string state);
     }
 }
 

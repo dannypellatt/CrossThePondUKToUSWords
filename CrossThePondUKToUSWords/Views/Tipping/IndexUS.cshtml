@@ -68,7 +68,9 @@
     p {
         font-size: larger;
     }
-
+    strong {
+        font-style: italic;
+    }
     @*END main SECTION*@
 
 </style>
@@ -80,12 +82,12 @@
             <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
         </li>
         <li class="nav-link weather">
-            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS"><img src="/Images/CtPweatherIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS">Weather</a>
         </li>
         <li class="nav-element nav-link temperature">
-            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="IndexUS"><img src="/Images/CtPtemperatureIcon.png" /></a>
+            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="IndexUS">Temp.</a>
         </li>
         <li class="nav-element nav-link tipping">
             <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
@@ -123,7 +125,7 @@
                 With this law, the ‘service industry’ was formalized and a status quo set.
             </p>
             <p>
-                Today, the federal minimum wage for those working positions is <italic>still</italic> $2.13/hr.
+                Today, the federal minimum wage for those working positions is <strong>still</strong> $2.13/hr.
                 The rest of their income is solely from tips.
                 This means, for those working full time in these positions, their total monthly salary is only $340.80
                 Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
@@ -143,15 +145,15 @@
         <div class="tipping-main-element tipping-main-right">
             <h3>Calculator:</h3>
             <form asp-action="IndexUS">
-                <label>Amount:</label>
+                <label>Check amount:</label>
                 <p><input type="number" asp-for="ValueBill" /></p>
                 <br />
 
-                <p><input type="submit" value="Tip: 25" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+                <p><input type="submit" value="Tip: 25%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with exceptional service</p>
-                <p><input type="submit" value="Tip: 20" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+                <p><input type="submit" value="Tip: 20%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with good service, car-rides</p>
-                <p><input type="submit" value="Tip: 15" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
+                <p><input type="submit" value="Tip: 15%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
                 <p>sit-down restaurant with poor service</p>
                 <br />
                 <div class="grid-container result">

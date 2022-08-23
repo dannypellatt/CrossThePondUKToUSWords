@@ -7,7 +7,6 @@
 <style>
 
     @*START top-bar SECTION*@
-
     .top-bar {
         min-height: 170px;
     }
@@ -23,74 +22,152 @@
         text-align: center;
     }
 
-    .nav-icon img:hover {
-        max-height: 135px;
-    }
-
     .swapper img {
-        max-height: 150px;
-        padding-left: 200px;
-
-    }
-
-    .swapper img:hover {
-        max-height: 160px;
+        max-height: 140px;
         padding-left: 200px;
     }
 
     @*END top-bar SECTION*@
 
     @*START heading SECTION*@
-
     .heading {
         text-align: center;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .heading h1 {
+        font-size: 80px;
     }
 
     @*END heading SECTION*@
+
+    @*START main SECTION*@
+    .temp-main {
+        display: inline-flex;
+        text-align: center;
+    }
+    .temp-main-element {
+        border: solid 1px #BEBEBE;
+        padding: 20px;
+    }
+    .temp-main-left {
+    }
+    .temp-main-right {
+        min-width: 35%;
+        padding: 20px;
+        margin-left: 30px;
+    }
+    .temp-main-element h3 {
+        text-align: left;
+    }
+    .temp-main-heading {
+        margin-bottom: 30px;
+    }
+    .notes {
+        font-style: italic;
+    }
+    p {
+        font-size: larger;
+        padding-bottom: 0px;
+    }
+
+    .temp-main-element img {
+        width: 400px;
+        padding-left: 30px;
+    }
+
+    .map-facts {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+    .map-facts-words {
+        display: block;
+        text-align: left;
+    }
+    .temp-main-right h2 {
+        text-align: left;
+    }
+    @*END main SECTION*@
 
 </style>
 
 <section class="top-bar">
     <ul class="nav-list">
         <li class="nav-element nav-link words">
-            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+            <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
         </li>
         <li class="nav-link weather">
             <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
         </li>
         <li class="nav-element nav-link temperature">
             <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
         </li>
         <li class="nav-element nav-link tipping">
-            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
         </li>
         <li class="nav-element nav-link swapper">
-            <a class="nav-swapper" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/SwapperUStoUK.png" /></a>
+            <a class="nav-swapper" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS"><img src="/Images/SwapperUStoUK.png" /></a>
         </li>
     </ul>
 </section>
 
 <div class="heading">
-    <h1>UK TO USA</h1>
+    <h1>USA TO UK</h1>
 </div>
 
-<div class="container">
-    <form method="post">
-        <div class="container">
-            <h1>Search By City Name</h1>
-            <div>
-                <input asp-for="CityName" class="form-control" placeholder="Enter city name..." />
-                <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-outline-primary">
-                    Search
-                </button>
-                <span asp-validation-for="CityName" class="text-danger"></span>
-            </div>
+<section class="temp-main">
+    <div class="temp-main-left">
+        <div class="temp-main-element temp-main-heading">
+            <h2>
+                Weather
+            </h2>
         </div>
-    </form>
-</div>
+        <div class="temp-main-element">
+                     
+            <div class="map-facts">
+                <h3>Parts of the UK:</h3>
+                <br /><br /><br />
+
+                <div class="map-facts-words">
+                    <p>
+                        &emsp;&emsp;The United Kingdom of Great Britain and Northern Ireland,
+                        commonly known as the United Kingdom (UK), or Britain, comprises England, Wales, Scotland, and Northern Ireland.
+                        The United Kingdom includes the island of Great Britain, part of the island of Ireland,
+                        and many smaller islands within the British Isles.
+                    </p>
+                    <p>
+                        &emsp;&emsp;The island of Ireland also contains the Republic of Ireland, a country independent to the UK.
+                    </p>
+                    <p>
+                        &emsp;&emsp;And if that's not very clear... don't worry! Most people from the UK don't get it either!
+                    </p>
+                </div>
+                <img src="/Images/vector-british-isles-map.jpeg" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="temp-main-element temp-main-right">
+        <h2>Forecast:</h2>
+        <br />
+        <form method="post">
+            <div class="container">
+                <h1>Search By City Name</h1>
+                <br />
+                <div>
+                    <input asp-for="CityName" class="form-control" placeholder="Enter city name..." />
+                    <br /><br />
+                    <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-outline-primary">
+                        Search
+                    </button>
+                    <span asp-validation-for="CityName" class="text-danger"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</section>
+

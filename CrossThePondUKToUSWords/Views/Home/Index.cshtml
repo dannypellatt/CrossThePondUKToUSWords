@@ -48,6 +48,8 @@
     .homeSection img {
         max-height: 600px;
         min-height: 600px;
+        transition: .5s ease;
+        backface-visibility: hidden;
     }
     .pondImg img {
         max-height: 100px;
@@ -76,6 +78,27 @@
         text-align: center;
         text-decoration: underline;
     }
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .grid-item:hover .image {
+        opacity: 0.3;
+    }
+    .grid-item:hover .middle {
+        opacity: 1;
+    }
+    .text {
+        color: black;
+        font-size: 35px;
+        padding: 16px 32px;
+    }
 
     @*END page SECTION*@
 
@@ -89,12 +112,17 @@
 
 
 <br />
-<h2>choose your destination</h2>
+<h2>click on a flag to choose your destination</h2>
 
 <div class="grid-container">
     <div class="grid-item left">
         <div class="homeSection">
-            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUS"><img src="images/USofA.png" alt="UK to USA" /></a>            
+            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUS">
+                <img src="images/howdy.png" alt="UK to USA" />
+                <div class="middle">
+                    <div class="text">UK TO USA</div>
+                </div>
+            </a>
         </div>
 
 
@@ -108,13 +136,13 @@
 
     <div class="grid-item right">
         <div class="homeSection">
-            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUK"><img src="images/brit_tin.png" alt="USA to UK" /></a>
+            <a class="choice-nav-icon" asp-area="" asp-controller="Welcome" asp-action="IndexUK">
+                <img src="images/brit_tin.png" alt="USA to UK" />
+                <div class="middle">
+                    <div class="text">USA TO UK</div>
+                </div>
+            </a>
+            
         </div>
     </div>
 </div>
-
-
-</main>
-
-
-

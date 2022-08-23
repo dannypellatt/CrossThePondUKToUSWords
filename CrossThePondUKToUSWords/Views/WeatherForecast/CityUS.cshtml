@@ -1,7 +1,7 @@
 ﻿@model CrossThePondUKToUSWords.Models.City
 
 @{
-    ViewData["Title"] = "City";
+    ViewData["Title"] = "CityUS";
 }
 
 <style>
@@ -108,13 +108,13 @@
             <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
         </li>
         <li class="nav-element nav-link swapper">
-            <a class="nav-swapper" asp-area="" asp-controller="Temp" asp-action="IndexUS"><img src="/Images/SwapperUStoUK.png" /></a>
+            <a class="nav-swapper" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/SwapperUStoUK.png" /></a>
         </li>
     </ul>
 </section>
 
 <div class="heading">
-    <h1>USA TO UK</h1>
+    <h1>UK TO USA</h1>
 </div>
 
 <section class="temp-main">
@@ -127,24 +127,20 @@
         <div class="temp-main-element">
 
             <div class="map-facts">
-                <h3>Parts of the UK:</h3>
+                <h3>Parts of the US:</h3>
                 <br /><br /><br />
 
                 <div class="map-facts-words">
                     <p>
-                        &emsp;&emsp;The United Kingdom of Great Britain and Northern Ireland,
-                        commonly known as the United Kingdom (UK), or Britain, comprises England, Wales, Scotland, and Northern Ireland.
-                        The United Kingdom includes the island of Great Britain, part of the island of Ireland,
-                        and many smaller islands within the British Isles.
+                        &emsp;&emsp;The United States of America (or USA), commonly known as the United States (or US) or America,
+                        consists of 50 states, 48 next to one another, 1 next to Canada and 1 in the middle of the Pacific Ocean, a federal district, five major unincorporated territories, nine minor outlying islands,
+                        and 326 Indian reservations with limited sovereignty.
                     </p>
                     <p>
-                        &emsp;&emsp;The island of Ireland also contains the Republic of Ireland, a country independent to the UK.
-                    </p>
-                    <p>
-                        &emsp;&emsp;And if that's not very clear... don't worry! Most people from the UK don't get it either!
+                        &emsp;&emsp;With all that going on, you need a weather app.
                     </p>
                 </div>
-                <img src="/Images/vector-british-isles-map.jpeg" />
+                <img src="/Images/map-of-us.jpeg" />
             </div>
 
         </div>
@@ -159,7 +155,7 @@
         <br />
         <br />
         <label asp-for="Temperature"></label>
-        <span class="badge alert-primary">@Model.Temperature°F</span>
+        <span class="badge alert-primary">@Model.Temperature°C</span>
         <br />
         <br />
         <label asp-for="Humidity"></label>
@@ -171,7 +167,7 @@
         <br />
         <br />
         <form method="get">
-            <button asp-controller="WeatherForecast" asp-action="SearchByCity" class="btn btn-primary">Go back</button>
+            <button asp-controller="WeatherForecast" asp-action="SearchByCityUS" class="btn btn-primary">Go back</button>
         </form>
     </div>
 

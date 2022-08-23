@@ -24,9 +24,13 @@
     @*START heading SECTION*@
     .heading {
         text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 40px;
     }
+
+        .heading h1 {
+            font-size: 80px;
+        }
     @*END heading SECTION*@
 
     @*START main SECTION*@
@@ -75,19 +79,15 @@
     <ul class="nav-list">
         <li class="nav-element nav-link words">
             <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
         </li>
         <li class="nav-link weather">
-            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS"><img src="/Images/CtPweatherIcon.png" /></a>
         </li>
         <li class="nav-element nav-link temperature">
             <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="IndexUS"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="IndexUS">Temp.</a>
         </li>
         <li class="nav-element nav-link tipping">
             <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
         </li>
         <li class="nav-element nav-link swapper">
             <a class="nav-swapper" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/SwapperUKtoUS2.png" /></a>
@@ -121,12 +121,13 @@
                 and hot summers (sometimes very hot), with a different season duration depending on latitude and distance from the sea.
                 In terms of precipitation there are very large differences throughout the country.
                 The northwest is wet, the southeast fairly wet and the central part of America is dry.
-            <br />
+            <p />
+            <p>The general pattern of the climate across the US has five distinct regions:
+            </p>
             <div class="climate-facts">
                 <img src="/Images/USClimate.jpeg" />
                 <ul>
-                    <p>The general pattern of the climate across the US has five distinct regions:</p>
-                    <br />
+
                     <li>west - marine - generally featuring cool summers and mild winters</li>
                     <li>south-west – hot-dry - hot, arid conditions with intense sunshine</li>
                     <li>north – cold - often have a significant annual variation in temperature </li>

@@ -56,7 +56,38 @@ namespace CrossThePondUKToUSWords.Controllers
             return View(viewModel);
         }
 
+        public IActionResult SearchByCityUS()
+        {
+            var city = new City();
+            return View(city);
+        }
 
+        [HttpPost]
+        public IActionResult SearchByCityUS(City model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("CityUS", "WeatherForecast", new { city = model.Name });
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CityUS(string city, string state)
+        {
+            WeatherResponse weatherResponse = _WForecastRepository.GetForecast(city);
+            City viewModel = new();
+            if (weatherResponse != null)
+            {
+                viewModel.Name = weatherResponse.Name;
+                viewModel.Temperature = weatherResponse.Main.Temp;
+                viewModel.Humidity = weatherResponse.Main.Humidity;
+                viewModel.Weather = weatherResponse.Weather[0].Main;
+
+
+            }
+            return View(viewModel);
+        }
     }
 }
 

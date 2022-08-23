@@ -15,6 +15,22 @@ namespace CrossThePondUKToUSWords.Models
         public int Humidity { get; set; }
 
         [Display(Name = "Weather Condition:")]
+        public string? Weather { get; set; }
+
+    }
+
+    public class CityUS
+    {
+        [Display(Name = "City:")]
+        public string Name { get; set; }
+
+        [Display(Name = "Temperature:")]
+        public float Temperature { get; set; }
+
+        [Display(Name = "Humidity:")]
+        public int Humidity { get; set; }
+
+        [Display(Name = "Weather Condition:")]
         public string Weather { get; set; }
 
     }
