@@ -4,8 +4,9 @@
 <style>
 
     @*START top-bar SECTION*@
-
     .top-bar {
+        margin-top: 30px;
+        margin-bottom: 30px;
         min-height: 170px;
     }
     .nav-list {
@@ -14,62 +15,166 @@
     }
     .nav-link img {
         display: inline;
-        max-height: 120px;
+        max-height: 130px;
         text-align: center;
     }
     .swapper img {
-        max-height: 140px;
-        padding-left: 200px;
+        max-height: 130px;
+
+    }
+    .swapper {
+        font-size: 60px;
+        padding-left: 230px;
     }
 
-    @*END top-bar SECTION*@
-
-    @*START heading SECTION*@
-
-    .heading {
+    .hover-img {
+        background-color: #fff;
+        color: #000;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
         text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        width: 100%;
+    }
+
+        .hover-img * {
+            box-sizing: border-box;
+            transition: all 0.45s ease;
+        }
+
+        .hover-img:before,
+        .hover-img:after {
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            transition: all 0.3s ease;
+            z-index: 1;
+            opacity: 0;
+            transform: scaleY(2);
+        }
+
+        .hover-img img {
+            vertical-align: top;
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+
+        .hover-img figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            align-items: center;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.1em;
+            opacity: 0;
+            z-index: 2;
+            transition-delay: 0.1s;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .hover-img:hover:before,
+        .hover-img:hover:after {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .hover-img:hover > img {
+            opacity: 0.7;
+        }
+
+        .hover-img:hover figcaption {
+            opacity: 1;
+        }
+        .nav-swapper {
+        position: relative;
+        display: inline-block;
+
+    }
+
+        .nav-swapper .img-swapper {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .nav-swapper:hover .img-swapper {
+            display: inline;
+        }
+        @*END top-bar SECTION*@
+        @*START heading SECTION*@
+
+        h1 {
+        font-size: 40px;
+        text-align: center;
     }
 
     @*END heading SECTION*@
 
-    @*START main SECTION*@ .tipping-main {
+    @*START main SECTION*@
+    .temp-main {
         display: inline-flex;
         text-align: center;
     }
-
-    .tipping-main-element {
+    .temp-main-element {
         border: solid 1px #BEBEBE;
         padding: 20px;
+        margin-bottom: 30px;
     }
-
-    .tipping-main-left {
+    .temp-main-left {
+        text-align: left;
     }
-
-    .tipping-main-right {
+    .temp-main-left h1 {
+        text-align: center;
+    }
+    .temp-main-right {
         min-width: 35%;
         padding: 20px;
         margin-left: 30px;
     }
-
-    .tipping-main-element h3 {
+    .temp-main-element h3 {
         text-align: left;
     }
-
-    .tipping-main-heading {
+    .temp-main-heading {
         margin-bottom: 30px;
     }
-
     .notes {
         font-style: italic;
     }
-
     p {
         font-size: larger;
     }
-    strong {
-        font-style: italic;
+    .temp-main-heading, .calculator {
+        border: solid 2px #BEBEBE;
+    }
+    .temp-main-element img {
+        max-width: 400px;
+        padding-left: 20px;
+        padding-top: 90px;
+    }
+
+    .regions {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+    .now-facts {
+        margin-left: 100px;
     }
     @*END main SECTION*@
 
@@ -77,105 +182,122 @@
 
 <section class="top-bar">
     <ul class="nav-list">
-        <li class="nav-element nav-link words">
-            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WordsUK" asp-action="IndexA">Words</a>
+        <li class="nav-element nav-link words hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUK" asp-action="IndexA">
+                <img src="/Images/CtPchatIcon.png" />
+                <figcaption>
+                    <h4>Words</h4>
+                </figcaption>
+            </a>
         </li>
-        <li class="nav-link weather">
-            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS">Weather</a>
+        <li class="nav-element nav-link weather hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCityUS">
+                <img src="/Images/CtPweatherIcon.png" />
+                <figcaption>
+                    <h4>Weather</h4>
+                </figcaption>
+            </a>
         </li>
-        <li class="nav-element nav-link temperature">
-            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="IndexUS"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="IndexUS">Temp.</a>
+        <li class="nav-element nav-link temperature hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="IndexUS">
+                <img src="/Images/CtPtemperatureIcon.png" />
+                <figcaption>
+                    <h4>Temp.</h4>
+                </figcaption>
+
+            </a>
         </li>
-        <li class="nav-element nav-link tipping">
-            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/CtPtipsIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUS">Tipping</a>
+        <li class="nav-element nav-link tipping hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUS">
+                <img src="/Images/CtPtipsIcon.png" />
+                <figcaption>
+                    <h4>Tipping</h4>
+                </figcaption>
+            </a>
         </li>
         <li class="nav-element nav-link swapper">
-            <a class="nav-swapper" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/SwapperUKtoUS2.png" /></a>
+            <a class="nav-swapper" asp-area="" asp-controller="Tipping" asp-action="IndexUK">
+                <img src="/Images/UKtoUSA-labelled.png" />
+                <img src="/Images/USAtoUK-swap-hover.png" class="img-swapper" />
+            </a>
         </li>
     </ul>
 </section>
 
-<div class="heading">
-    <h1>UK TO USA</h1>
-</div>
-
-
-<section class="tipping-main">
-    <div class="tipping-main-left">
-        <div class="tipping-main-element tipping-main-heading">
-            <h2>
-                Tipping in the United States</h2>
-                <br />
+<section class="temp-main">
+    <div class="temp-main-left">
+        <div class="temp-main-element temp-main-heading">
+            <h1>
+                Tipping in the United States
+            </h1>
         </div>
-        <div class="tipping-main-element">
+        <div class="temp-main-element explained">
             <h3>Explained:</h3>
             <br />
             <p>
-                Tipping in the United States is standard practice. It's important as the country does not have universal high wages.
+                &emsp;&emsp;Tipping in the United States is standard practice. It's important as the country doesn't have universal high wages.
                 Tipping etiquette is an outlier, due to the way that the United States operates.
             </p>
             <p>
-                The practice of tipping became formalized across the US in the 1960s.
+                &emsp;&emsp;The practice of tipping became formalized across the US in the 1960s.
                 Congress enacted regulations around federal minimum wages and ultimately determined that
                 entry-level service jobs receiving at least $30 a month in tips required only a minimum wage of $2.13/hr.
                 With this law, the ‘service industry’ was formalized and a status quo set.
             </p>
-            <p>
-                Today, the federal minimum wage for those working positions is <strong>still</strong> $2.13/hr.
-                The rest of their income is solely from tips.
-                This means, for those working full time in these positions, their total monthly salary is only $340.80
-                Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
-            </p>
-            <p>
-                Also, remember that tax is not usually included in the given price, so prepare to pay more.
-            </p>
-            <p>
-                To the right you'll find a rough guide to tipping in some common interactions.
-            </p>
             <br />
-            <br />
-            <p class="notes">Tipping is not necessary for stores, coffee shops, hotel cleaning staff, however, if you feel like it, $1-$5 is always appreciated.</p>
         </div>
+
     </div>
 
-        <div class="tipping-main-element tipping-main-right">
-            <h3>Calculator:</h3>
-            <form asp-action="IndexUS">
-                <label>Check amount:</label>
-                <p><input type="number" asp-for="ValueBill" /></p>
-                <br />
+    <div class="temp-main-element temp-main-right calculator">
+        <h3>Calculator:</h3>
+        <br />
+        <form asp-action="IndexUS">
+            <label>Check amount:</label>
+            <p><input type="number" asp-for="ValueBill" /></p>
+            <br />
 
-                <p><input type="submit" value="Tip: 25%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
-                <p>sit-down restaurant with exceptional service</p>
-                <p><input type="submit" value="Tip: 20%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
-                <p>sit-down restaurant with good service, car-rides</p>
-                <p><input type="submit" value="Tip: 15%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
-                <p>sit-down restaurant with poor service</p>
-                <br />
-                <div class="grid-container result">
-                    <div class="grid-item center resultBox">
-                        <label>Tip:</label>
-                        <p><input type="number" asp-for="@ViewData["result"]" /></p>
-                    </div>
-                    <div class="grid-item center resultBox">
-                        <label>Total:</label>
-                        <p><input type="number" asp-for="@ViewData["total"]" /></p>
-                    </div>
+            <p><input type="submit" value="Tip: 15%" asp-for="Calculate" /><input type="submit" value="Tip: 20%" asp-for="Calculate" /><input type="submit" value="Tip: 25%" asp-for="Calculate" /></p>
+            <br />
+            <div class="grid-container result">
+                <div class="grid-item center resultBox">
+                    <label>Tip:</label>
+                    <p><input type="number" asp-for="@ViewData["result"]" /></p>
                 </div>
-                <br />
-                <p>$1-$5 standard at:</p>
-                <p>for hotel cleaning staff</p>
-                <p>$1-$2 standard at:</p>
-                <p>at a bar per drink, </p>
-            </form>
-        </div>
+                <div class="grid-item center resultBox">
+                    <label>Total:</label>
+                    <p><input type="number" asp-for="@ViewData["total"]" /></p>
+                </div>
+        </form>
+    </div>
 
 </section>
 
+<div class="temp-main-element regions">
+    <div class="rough-guide">
+        <h3>Rough guide:</h3>
+        <br />
+        <p>- sit-down restaurant: 20% average</p>
+        <p>- car rides / taxis: 20% average</p>
+        <p>- bar: $1-$2 per drink</p>
+        <p>- hotel cleaning staff, porters: $5 average</p>
+        <p></p>
+    </div>
+    
 
+    <div class="now-facts">
 
+        <p>
+            &emsp;&emsp;Today, the federal minimum wage for those working service positions is <strong>still</strong> $2.13/hr.
+            The rest of their income is solely from tips.
+            This means, for those working full time in these jobs, their total monthly salary is only $340.80.
+            Average rent for a one bedroom apartment is over $1700, so it's very important to those serving you!
+        </p>
+        <p>&emsp;&emsp;Tipping is not necessary for stores, coffee shops, fast food, etc. however, if you feel like it, $1-$5 is always appreciated.</p>
+        <p>
+            &emsp;&emsp;Also, remember that in most stores and on most menus, tax is not included in the price, so expect to pay more!
+            The amount changes, depending on which state you're in.
+        </p>
+    </div>
 
+</div>

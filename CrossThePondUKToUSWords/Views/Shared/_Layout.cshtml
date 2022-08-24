@@ -12,6 +12,9 @@
     .navbar-brand img {
         max-width: 30px;
     }
+    .nav-portfolio-link a:hover, .nav-app-link a:hover {
+        color: cadetblue;
+    }
 
 </style>
 <html lang="en">
@@ -38,20 +41,20 @@
                         <li class="nav-item">
                             <p>Danny Pellatt - Portfolio Item - Cross The Pond</p>
                         </li>
-                        <li class="nav-item nav-portfolio-link" id="portfolio-links-start">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Portfolio Website</a>
-                        </li>
-                        <li class="nav-item nav-portfolio-link">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Github</a>
-                        </li>
-                        <li class="nav-item nav-portfolio-link">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Resume</a>
-                        </li>
                         <li class="nav-item nav-app-link" id="app-links-start">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">App Home</a>
                         </li>
                         <li class="nav-item nav-app-link">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">App Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">App Privacy & Info</a>
+                        </li>
+                        <li class="nav-item nav-portfolio-link" id="portfolio-links-start">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Portfolio Website</a>
+                        </li>
+                        <li class="nav-item nav-portfolio-link">
+                            <p><a  class="nav-link text-dark" href="https://github.com/dannypellatt">Github</a></p>
+                        </li>
+                        <li class="nav-item nav-portfolio-link">
+                            <p><a class="nav-link text-dark" href="#">Resume</a></p>
                         </li>
                     </ul>
                 </div>

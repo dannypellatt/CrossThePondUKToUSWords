@@ -3,3 +3,10 @@
 
 // Write your JavaScript code.
 
+function onHover() {
+    $("#UKSwapperImg").attr('src', '/Images/UKtoUSA-labelled');
+}
+
+function offHover() {
+    $("#UKSwapperImg").attr('src', '/Images/UKtoUSA-swap-hover');
+}

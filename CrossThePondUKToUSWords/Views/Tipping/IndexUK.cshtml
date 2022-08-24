@@ -3,61 +3,153 @@
 <style>
 
     @*START top-bar SECTION*@
-
     .top-bar {
+        margin-top: 30px;
+        margin-bottom: 30px;
         min-height: 170px;
     }
-
     .nav-list {
         display: inline-flex;
         text-align: center;
     }
-
     .nav-link img {
         display: inline;
-        max-height: 120px;
+        max-height: 130px;
         text-align: center;
     }
-
     .swapper img {
-        max-height: 140px;
-        padding-left: 200px;
+        max-height: 130px;
+
+    }
+    .swapper {
+        font-size: 60px;
+        padding-left: 230px;
+    }
+
+    .hover-img {
+        background-color: #fff;
+        color: #000;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+        .hover-img * {
+            box-sizing: border-box;
+            transition: all 0.45s ease;
+        }
+
+        .hover-img:before,
+        .hover-img:after {
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            transition: all 0.3s ease;
+            z-index: 1;
+            opacity: 0;
+            transform: scaleY(2);
+        }
+
+        .hover-img img {
+            vertical-align: top;
+            max-width: 100%;
+            backface-visibility: hidden;
+        }
+
+        .hover-img figcaption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            align-items: center;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.1em;
+            opacity: 0;
+            z-index: 2;
+            transition-delay: 0.1s;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        .hover-img:hover:before,
+        .hover-img:hover:after {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .hover-img:hover > img {
+            opacity: 0.7;
+        }
+
+        .hover-img:hover figcaption {
+            opacity: 1;
+        }
+        .nav-swapper {
+        position: relative;
+        display: inline-block;
 
     }
 
-    @*END top-bar SECTION*@
+        .nav-swapper .img-swapper {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
 
-    @*START heading SECTION*@
+        .nav-swapper:hover .img-swapper {
+            display: inline;
+        }
+        @*END top-bar SECTION*@
+        @*START heading SECTION*@
 
-    .heading {
+        h1 {
+        font-size: 40px;
         text-align: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
     }
 
     @*END heading SECTION*@
 
     @*START main SECTION*@
-
-    .tipping-main {
+    .temp-main {
         display: inline-flex;
-        text-align: center;        
+        text-align: center;
     }
-    .tipping-main-element {
+    .temp-main-element {
         border: solid 1px #BEBEBE;
         padding: 20px;
+        margin-bottom: 30px;
     }
-    .tipping-main-left {
+    .temp-main-left {
+        text-align: left;
     }
-    .tipping-main-right {
+    .temp-main-left h1 {
+        text-align: center;
+    }
+    .temp-main-right {
         min-width: 35%;
         padding: 20px;
         margin-left: 30px;
     }
-    .tipping-main-element h3 {
+    .temp-main-element h3 {
         text-align: left;
     }
-    .tipping-main-heading {
+    .temp-main-heading {
         margin-bottom: 30px;
     }
     .notes {
@@ -66,108 +158,139 @@
     p {
         font-size: larger;
     }
+    .temp-main-heading, .calculator {
+        border: solid 2px #BEBEBE;
+    }
+    .temp-main-element img {
+        max-width: 400px;
+        padding-left: 20px;
+        padding-top: 90px;
+    }
+
+    .regions {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+    .now-facts {
+        margin-left: 100px;
+    }
     @*END main SECTION*@
 
 </style>
 
 <section class="top-bar">
     <ul class="nav-list">
-        <li class="nav-element nav-link words">
-            <a class="nav-icon" asp-area="" asp-controller="WordsUSA" asp-action="IndexA"><img src="/Images/CtPchatIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WordsUSA" asp-action="IndexA">Words</a>
+        <li class="nav-element nav-link words hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="wordsUSA" asp-action="IndexA">
+                <img src="/Images/CtPchatIcon.png" />
+                <figcaption>
+                    <h4>Words</h4>
+                </figcaption>
+            </a>
         </li>
-        <li class="nav-link weather">
-            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity"><img src="/Images/CtPweatherIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">Weather</a>
+        <li class="nav-element nav-link weather hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="WeatherForecast" asp-action="SearchByCity">
+                <img src="/Images/CtPweatherIcon.png" />
+                <figcaption>
+                    <h4>Weather</h4>
+                </figcaption>
+            </a>
         </li>
-        <li class="nav-element nav-link temperature">
-            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index"><img src="/Images/CtPtemperatureIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Temp" asp-action="Index">Temp.</a>
+        <li class="nav-element nav-link temperature hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="Temp" asp-action="Index">
+                <img src="/Images/CtPtemperatureIcon.png" />
+                <figcaption>
+                    <h4>Temp.</h4>
+                </figcaption>
+
+            </a>
         </li>
-        <li class="nav-element nav-link tipping">
-            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK"><img src="/Images/CtPtipsIcon.png" /></a>
-            <a class="nav-option" asp-area="" asp-controller="Tipping" asp-action="IndexUK">Tipping</a>
+        <li class="nav-element nav-link tipping hover-img">
+            <a class="nav-icon" asp-area="" asp-controller="Tipping" asp-action="IndexUK">
+                <img src="/Images/CtPtipsIcon.png" />
+                <figcaption>
+                    <h4>Tipping</h4>
+                </figcaption>
+            </a>
         </li>
         <li class="nav-element nav-link swapper">
-            <a class="nav-swapper" asp-area="" asp-controller="Tipping" asp-action="IndexUS"><img src="/Images/SwapperUStoUK.png" /></a>
+            <a class="nav-swapper" asp-area="" asp-controller="Tipping" asp-action="IndexUS">
+                <img src="/Images/USAtoUK-labelled.png" />
+                <img src="/Images/UKtoUSA-swap-hover.png" class="img-swapper" />
+            </a>
         </li>
     </ul>
 </section>
 
-<div class="heading">
-    <h1>USA TO UK</h1>
-</div>
-
-
-<section class="tipping-main">
-    <div class="tipping-main-left">
-        <div class="tipping-main-element tipping-main-heading">
-            <h2>Tipping in the United Kingdom</h2>
-            <br />
+<section class="temp-main">
+    <div class="temp-main-left">
+        <div class="temp-main-element temp-main-heading">
+            <h1>
+                Tipping in the United Kingdom
+            </h1>
         </div>
-        <div class="tipping-main-element">
+        <div class="temp-main-element explained">
             <h3>Explained:</h3>
             <br />
             <p>
-                Tipping is not expected in Britain the way it is in America.
+                &emsp;&emsp;Tipping is not expected in Britain the way it is in America.
                 Workers don't officially have to rely on their tips to live, and all staff in the UK must be paid at least the National Minimum Wage.
                 Employers are also banned from topping up wages with tips from customers.
             </p>
             <p>
-                Although it's not necessary to tip in most places you would in the US, it's always greatly appreciated
+                &emsp;&emsp;Although it's not necessary to tip in most places you would in the US, it's always greatly appreciated
                 (the National Minimum Wage does not meet the National Living Wage).
             </p>
-            <p>
-                Possibly due to the fact that tipping is not necessarily expected, you may find that wait staff, though polite,
-                will not be quite as attentive as back home!
-            </p>
-            <p>
-                Also, remember that tax is usually included in the stated price everywhere you go in the UK.
-            </p>
-            <p>
-                To the right you'll find a rough guide to tipping in some common interactions.
-            </p>
             <br />
-            <br />
-            <br />
-            <p class="notes">*Tipping is not necessary for stores, coffee shops, hotel staff, however, if you feel like it, £1-£5 is always appreciated.</p>
         </div>
+
     </div>
 
+    <div class="temp-main-element temp-main-right calculator">
+        <h3>Calculator:</h3>
+        <br />
+        <form asp-action="IndexUK">
+            <label>Check amount:</label>
+            <p><input type="number" asp-for="ValueBill" /></p>
+            <br />
 
-
-        <div class="tipping-main-element tipping-main-right">
-            <h3>Calculator:</h3>
-            <form asp-action="IndexUK">
-                <label>Check amount:</label>
-                <p><input type="number" asp-for="ValueBill" /></p>
-                <br />
-
-                <p><input type="submit" value="Tip: 15%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
-                <p>sit-down restaurant with exceptional service</p>
-                <p><input type="submit" value="Tip: 10%" asp-for="Calculate" />&nbsp;&nbsp; Standard at:</p>
-                <p>sit-down restaurant with standard service</p>
-                <div class="">
-                    <div class="">
-
-                        <label>Tip:</label>
-                        <p><input type="number" asp-for="@ViewData["result"]" /></p>
-                    </div>
-                    <div class="">
-                        <label>Total:</label>
-                        <p><input type="number" asp-for="@ViewData["total"]" /></p>
-                    </div>
+            <p><input type="submit" value="Tip: 10%" asp-for="Calculate" /><input type="submit" value="Tip: 15%" asp-for="Calculate" /></p>
+            <div>
+                <div>
+                    <label>Tip:</label>
+                    <p><input type="number" asp-for="@ViewData["result"]" /></p>
                 </div>
-                <br />
-                <p>£1-£5 standard at:</p>
-                <p>for hotel cleaning staff, tours</p>
-                <p>£1-£2 standard at:</p>
-                <p>delivery drivers</p>
-
-            </form>
-        </div>
-
+                <div>
+                    <label>Total:</label>
+                    <p><input type="number" asp-for="@ViewData["total"]" /></p>
+                </div>
+            </div>
+        </form>
+    </div>
 
 </section>
 
+<div class="temp-main-element regions">
+    <div class="rough-guide">
+        <h3>Rough guide:</h3>
+        <br />
+        <p>- sit-down restaurant: 10% average</p>
+        <p>- car rides / taxis: 10% average</p>
+        <p>- buskers / street performers: £1-£5</p>
+        <p></p>
+    </div>
+
+
+    <div class="now-facts">
+
+        <p>&emsp;&emsp;Tipping is not necessary for pubs, bars, coffee shops, food delivery, and hotel staff, however, if you feel like it, £1-£5 is always appreciated.</p>
+        <p>&emsp;&emsp;Tipping may be looked upon weirdly, or even brusquely refused in fast food restaurants, on public transport, and if helped by a stranger,
+        however, check for a tip jar. There may just be one around.</p>
+        <p>
+            &emsp;&emsp;Also, remember that tax is almost always included in the stated price everywhere you go in the UK. So what you see is what you pay!
+        </p>
+    </div>
+
+</div>
 
