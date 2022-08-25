@@ -43,7 +43,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsA);
+            return View(wordsA.OrderBy(x=>x.wordUSA).ToList());
         }
 
         public IActionResult IndexB()
@@ -59,7 +59,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsB);
+            return View(wordsB.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexC()
@@ -75,7 +75,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsC);
+            return View(wordsC.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexD()
@@ -91,7 +91,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsD);
+            return View(wordsD.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexE()
@@ -107,7 +107,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsE);
+            return View(wordsE.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexF()
@@ -123,7 +123,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsF);
+            return View(wordsF.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexG()
@@ -139,7 +139,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsG);
+            return View(wordsG.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexH()
@@ -155,7 +155,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsH);
+            return View(wordsH.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexI()
@@ -171,7 +171,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsI);
+            return View(wordsI.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexJ()
@@ -187,7 +187,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsJ);
+            return View(wordsJ.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexK()
@@ -203,7 +203,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsK);
+            return View(wordsK.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexL()
@@ -219,7 +219,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsL);
+            return View(wordsL.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexM()
@@ -235,7 +235,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsM);
+            return View(wordsM.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexN()
@@ -251,7 +251,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsN);
+            return View(wordsN.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexO()
@@ -267,7 +267,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsO);
+            return View(wordsO.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexP()
@@ -283,7 +283,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsP);
+            return View(wordsP.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexQ()
@@ -299,7 +299,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsQ);
+            return View(wordsQ.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexR()
@@ -315,7 +315,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsR);
+            return View(wordsR.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexS()
@@ -331,7 +331,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsS);
+            return View(wordsS.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexT()
@@ -347,7 +347,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsT);
+            return View(wordsT.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexU()
@@ -363,7 +363,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsU);
+            return View(wordsU.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexV()
@@ -379,7 +379,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsV);
+            return View(wordsV.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexW()
@@ -395,7 +395,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsW);
+            return View(wordsW.OrderBy(x => x.wordUSA).ToList());
         }
 
         public IActionResult IndexXYZ()
@@ -411,7 +411,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            return View(wordsXYZ);
+            return View(wordsXYZ.OrderBy(x => x.wordUSA).ToList());
         }
 
         #endregion

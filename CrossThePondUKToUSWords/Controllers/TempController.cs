@@ -26,7 +26,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             if (cal.calculate == "Fahrenheit to Celcius")
             {
-                cal.result = (a - 32) * (5 / 9);
+                cal.result = (a - 32) / 1.8;
 
             }
             if (cal.calculate == "Celcius to Fahrenheit")
@@ -34,8 +34,7 @@ namespace CrossThePondUKToUSWords.Controllers
                 cal.result = (a * 9) / 5 + 32;
 
             }
-
-            ViewData["result"] = cal.result;
+            ViewData["result"] = Math.Round(cal.result, 1);
             return View();
         }
 
@@ -54,7 +53,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             }
 
-            ViewData["result"] = cal.result;
+            ViewData["result"] = Math.Round(cal.result, 1);
             return View();
         }
     }

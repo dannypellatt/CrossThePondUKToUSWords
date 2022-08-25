@@ -252,18 +252,18 @@
         <br />
         <form asp-action="IndexUK">
             <label>Check amount:</label>
-            <p><input type="number" asp-for="ValueBill" /></p>
+            <p>£<input type="number" asp-for="ValueBill" /></p>
             <br />
 
             <p><input type="submit" value="Tip: 10%" asp-for="Calculate" /><input type="submit" value="Tip: 15%" asp-for="Calculate" /></p>
             <div>
                 <div>
                     <label>Tip:</label>
-                    <p><input type="number" asp-for="@ViewData["result"]" /></p>
+                    <p>£<input type="number" asp-for="@ViewData["result"]" /></p>
                 </div>
                 <div>
                     <label>Total:</label>
-                    <p><input type="number" asp-for="@ViewData["total"]" /></p>
+                    <p>£<input type="number" asp-for="@ViewData["total"]" /></p>
                 </div>
             </div>
         </form>

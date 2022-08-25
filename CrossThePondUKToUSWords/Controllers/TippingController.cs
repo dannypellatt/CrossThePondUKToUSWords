@@ -30,8 +30,8 @@ namespace CrossThePondUKToUSWords.Controllers
                 cal.Total = a + (a * 0.15);
             }
 
-            ViewData["result"] = cal.Result;
-            ViewData["total"] = cal.Total;
+            ViewData["result"] = Math.Round(cal.Result, 2).ToString("0.00");
+            ViewData["total"] = Math.Round(cal.Total, 2).ToString("0.00");
             return View();
         }
 
@@ -55,8 +55,8 @@ namespace CrossThePondUKToUSWords.Controllers
                 cal.Result = a * 0.25;
                 cal.Total = a + (a * 0.25);
             }
-            ViewData["result"] = cal.Result;
-            ViewData["total"] = cal.Total;
+            ViewData["result"] = Math.Round(cal.Result, 2).ToString("0.00");
+            ViewData["total"] = Math.Round(cal.Total, 2).ToString("0.00");
             return View();
         }
 

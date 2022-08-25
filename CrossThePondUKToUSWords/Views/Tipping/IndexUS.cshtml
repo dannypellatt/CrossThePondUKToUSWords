@@ -254,7 +254,7 @@
         <br />
         <form asp-action="IndexUS">
             <label>Check amount:</label>
-            <p><input type="number" asp-for="ValueBill" /></p>
+            <p>$<input type="number" asp-for="ValueBill" /></p>
             <br />
 
             <p><input type="submit" value="Tip: 15%" asp-for="Calculate" /><input type="submit" value="Tip: 20%" asp-for="Calculate" /><input type="submit" value="Tip: 25%" asp-for="Calculate" /></p>
@@ -262,11 +262,11 @@
             <div class="grid-container result">
                 <div class="grid-item center resultBox">
                     <label>Tip:</label>
-                    <p><input type="number" asp-for="@ViewData["result"]" /></p>
+                    <p>$<input type="number" asp-for="@ViewData["result"]" /></p>
                 </div>
                 <div class="grid-item center resultBox">
                     <label>Total:</label>
-                    <p><input type="number" asp-for="@ViewData["total"]" /></p>
+                    <p>$<input type="number" asp-for="@ViewData["total"]" /></p>
                 </div>
         </form>
     </div>

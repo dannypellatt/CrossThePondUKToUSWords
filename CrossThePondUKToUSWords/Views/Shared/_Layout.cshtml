@@ -16,6 +16,28 @@
         color: cadetblue;
     }
 
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #container {
+        min-height: 100%;
+        position: relative;
+    }
+
+    body {
+        padding-bottom: 60px;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+    }
+
 </style>
 <html lang="en">
 <head>
@@ -48,10 +70,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">App Privacy & Info</a>
                         </li>
                         <li class="nav-item nav-portfolio-link" id="portfolio-links-start">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Portfolio Website</a>
+                            <p><a class="nav-link text-dark" href="https://github.com/dannypellatt">Portfolio Website</a></p>
                         </li>
                         <li class="nav-item nav-portfolio-link">
-                            <p><a  class="nav-link text-dark" href="https://github.com/dannypellatt">Github</a></p>
+                            <p><a class="nav-link text-dark" href="https://github.com/dannypellatt">Github</a></p>
                         </li>
                         <li class="nav-item nav-portfolio-link">
                             <p><a class="nav-link text-dark" href="#">Resume</a></p>
