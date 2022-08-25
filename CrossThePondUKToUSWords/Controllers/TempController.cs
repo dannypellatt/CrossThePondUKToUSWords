@@ -44,7 +44,7 @@ namespace CrossThePondUKToUSWords.Controllers
 
             if (cal.calculate == "Fahrenheit to Celcius")
             {
-                cal.result = (a - 32) * (5 / 9);
+                cal.result = (a - 32) / 1.8;
 
             }
             if (cal.calculate == "Celcius to Fahrenheit")
