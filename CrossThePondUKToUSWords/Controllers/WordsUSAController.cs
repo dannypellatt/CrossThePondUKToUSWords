@@ -100,7 +100,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsE = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUSA.First() == 'E' || word.wordUSA.First() == 'E')
+                if (word.wordUSA.First() == 'e' || word.wordUSA.First() == 'E')
                 {
                     wordsE.Add(word);
                 }
@@ -132,7 +132,7 @@ namespace CrossThePondUKToUSWords.Controllers
             var wordsG = new List<wordsUK>();
             foreach (var word in words)
             {
-                if (word.wordUSA.First() == 'G' || word.wordUSA.First() == 'G')
+                if (word.wordUSA.First() == 'g' || word.wordUSA.First() == 'G')
                 {
                     wordsG.Add(word);
                 }
